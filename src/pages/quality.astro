@@ -1,0 +1,449 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "vinQuality",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "description": "Cloud-based Quality Management System for manufacturers. NCMR, CAPA, SCAR, Deviations, 21 CFR Part 11 compliance, and real-time analytics.",
+  "url": "https://vinqms.com/quality",
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "29",
+    "highPrice": "99",
+    "offerCount": "4"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "vinReliability LLC"
+  }
+});
+
+const features = [
+  {
+    title: "21 CFR Part 11 E-Signatures",
+    description: "FDA-compliant electronic signatures with meaning statements, password re-authentication, and tamper-evident audit records.",
+    icon: "signature"
+  },
+  {
+    title: "Multi-Step Approval Workflows",
+    description: "Configurable approval chains with parallel and sequential routing, escalation rules, and delegation support.",
+    icon: "workflow"
+  },
+  {
+    title: "SLA Tracking & Breach Alerts",
+    description: "Set response and resolution SLAs per record type. Automatic escalation emails when deadlines approach or breach.",
+    icon: "clock"
+  },
+  {
+    title: "Record Locking",
+    description: "Prevent concurrent edits with optimistic locking. Clear lock indicators and automatic release on timeout.",
+    icon: "lock"
+  },
+  {
+    title: "Hash Chain Audit Trail",
+    description: "SHA-256 cryptographic hash chain ensures every change is tamper-evident and fully traceable for regulatory audits.",
+    icon: "chain"
+  },
+  {
+    title: "Role-Based Access Control",
+    description: "Granular permissions by role, department, and module. Ensure users only see and do what they're authorized for.",
+    icon: "users"
+  },
+  {
+    title: "CSV & PDF Report Exports",
+    description: "Export any report or record set to CSV or professionally formatted PDF. Schedule recurring report delivery.",
+    icon: "download"
+  },
+  {
+    title: "Real-Time Dashboards",
+    description: "Live metrics, trend charts, and KPI tracking. Customizable widgets for quality managers and executives.",
+    icon: "chart"
+  },
+  {
+    title: "Calibration Management",
+    description: "Track instrument calibration schedules, certificates, and due dates. Automated reminders for upcoming calibrations.",
+    icon: "calibration"
+  }
+];
+
+const modules = [
+  { name: "NCMR", full: "Non-Conformance Reports", color: "#EF4444", desc: "Create, track, and resolve non-conforming material reports with full traceability and disposition workflows." },
+  { name: "Deviations", full: "Deviation Management", color: "#F59E0B", desc: "Document process deviations, assess impact, and manage approvals with configurable workflow routing." },
+  { name: "CAPA", full: "Corrective & Preventive Actions", color: "#2563EB", desc: "Root cause analysis, corrective action planning, effectiveness verification, and closure tracking." },
+  { name: "SCAR", full: "Supplier Corrective Actions", color: "#7C3AED", desc: "Issue supplier corrective action requests, track responses, and monitor supplier quality performance." },
+  { name: "Analytics", full: "Analytics & Reporting", color: "#0D9488", desc: "Real-time dashboards, trend analysis, Pareto charts, and scheduled report generation with export." },
+  { name: "Inspection", full: "Inspection & Calibration", color: "#10B981", desc: "Manage inspection plans, record results, track calibration schedules, and generate certificates." },
+  { name: "Supplier Mgmt", full: "Supplier Management", color: "#6366F1", desc: "Approved supplier lists, performance scorecards, qualification tracking, and risk assessments." }
+];
+---
+
+<BaseLayout
+  title="vinQuality — Cloud-Based Quality Management System | vinReliability"
+  description="Enterprise QMS with zero overhead. NCMR, CAPA, SCAR, Deviations, 21 CFR Part 11 e-signatures, SHA-256 audit trail, and real-time dashboards."
+  keywords="quality management system, QMS, NCMR, CAPA, SCAR, deviation management, 21 CFR Part 11, e-signatures, audit trail, ISO 9001"
+  canonical="/quality"
+  jsonLd={jsonLd}
+>
+  <Header />
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden bg-white">
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[#0D9488] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-[#0D9488] rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+        <div class="reveal mx-auto max-w-4xl text-center">
+          <span class="inline-flex items-center rounded-full border border-[#0D9488]/20 bg-[#0D9488]/5 px-4 py-1.5 text-sm font-medium text-[#0D9488]">
+            Quality Management System
+          </span>
+          <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            Enterprise QMS,<br />Zero Overhead.
+          </h1>
+          <p class="mt-6 text-lg text-slate-600 sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            Modular, cloud-based quality management built for manufacturers. From NCMRs to CAPAs, manage every quality event with compliance baked in.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg bg-[#0D9488] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#0D9488]/25 hover:bg-[#0F766E] transition-colors w-full sm:w-auto"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="/pricing"
+              class="inline-flex items-center justify-center rounded-lg border border-slate-300 px-6 py-3 text-base font-semibold text-slate-700 hover:bg-slate-50 transition-colors w-full sm:w-auto"
+            >
+              See Pricing
+            </a>
+          </div>
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-slate-500">
+            <span>21 CFR Part 11</span>
+            <span class="text-slate-300">&middot;</span>
+            <span>SHA-256 Audit Trail</span>
+            <span class="text-slate-300">&middot;</span>
+            <span>Role-Based Access</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES GRID ============ -->
+    <section class="py-20 sm:py-28 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Platform Features</h2>
+          <p class="mt-4 text-lg text-slate-600">Everything you need for compliant, efficient quality management.</p>
+        </div>
+        <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0D9488]/10">
+                {feature.icon === "signature" && (
+                  <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                )}
+                {feature.icon === "workflow" && (
+                  <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                )}
+                {feature.icon === "clock" && (
+                  <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                {feature.icon === "lock" && (
+                  <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                )}
+                {feature.icon === "chain" && (
+                  <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                  </svg>
+                )}
+                {feature.icon === "users" && (
+                  <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                )}
+                {feature.icon === "download" && (
+                  <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                )}
+                {feature.icon === "chart" && (
+                  <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                )}
+                {feature.icon === "calibration" && (
+                  <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                )}
+              </div>
+              <h3 class="mt-4 text-base font-bold text-slate-900">{feature.title}</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MODULES GRID ============ -->
+    <section class="py-20 sm:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Modular by Design</h2>
+          <p class="mt-4 text-lg text-slate-600">Pick the modules you need. Add more as you grow. No wasted spend.</p>
+        </div>
+        <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {modules.map((mod) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg" style={`background-color: ${mod.color}15;`}>
+                <svg class="h-5 w-5" style={`color: ${mod.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-base font-bold text-slate-900">{mod.name}</h3>
+              <p class="text-sm font-medium" style={`color: ${mod.color};`}>{mod.full}</p>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">{mod.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="py-20 sm:py-28 bg-slate-50" id="pricing">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Simple, Transparent Pricing</h2>
+          <p class="mt-4 text-lg text-slate-600">Start small, scale as you grow. No hidden fees.</p>
+        </div>
+        <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Starter -->
+          <div class="rounded-2xl border border-slate-200 bg-white p-8">
+            <h3 class="text-lg font-bold text-slate-900">Starter</h3>
+            <div class="mt-4">
+              <span class="text-4xl font-extrabold text-slate-900">$29</span>
+              <span class="text-sm text-slate-500">/seat/mo</span>
+            </div>
+            <ul class="mt-8 space-y-3">
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                1 module included
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Basic workflows
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Up to 5 users
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                CSV export
+              </li>
+            </ul>
+            <a href="/contact" class="mt-8 block rounded-lg border border-slate-300 py-2.5 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
+              Get Started
+            </a>
+          </div>
+
+          <!-- Professional (Highlighted) -->
+          <div class="relative rounded-2xl border-2 border-[#0D9488] bg-white p-8 shadow-lg shadow-[#0D9488]/10">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+              <span class="inline-block rounded-full bg-[#0D9488] px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">Most Popular</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Professional</h3>
+            <div class="mt-4">
+              <span class="text-4xl font-extrabold text-slate-900">$59</span>
+              <span class="text-sm text-slate-500">/seat/mo</span>
+            </div>
+            <ul class="mt-8 space-y-3">
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                3 modules included
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                21 CFR Part 11 e-signatures
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Advanced workflows
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                PDF &amp; CSV export
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Real-time dashboard
+              </li>
+            </ul>
+            <a href="/contact" class="mt-8 block rounded-lg bg-[#0D9488] py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors">
+              Start Free Trial
+            </a>
+          </div>
+
+          <!-- Team -->
+          <div class="rounded-2xl border border-slate-200 bg-white p-8">
+            <h3 class="text-lg font-bold text-slate-900">Team</h3>
+            <div class="mt-4">
+              <span class="text-4xl font-extrabold text-slate-900">$99</span>
+              <span class="text-sm text-slate-500">/seat/mo</span>
+            </div>
+            <ul class="mt-8 space-y-3">
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                5 modules included
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                SLA tracking
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                API access
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Record locking
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                vinFMEA integration
+              </li>
+            </ul>
+            <a href="/contact" class="mt-8 block rounded-lg border border-slate-300 py-2.5 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
+              Get Started
+            </a>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="rounded-2xl border border-slate-200 bg-white p-8">
+            <h3 class="text-lg font-bold text-slate-900">Enterprise</h3>
+            <div class="mt-4">
+              <span class="text-4xl font-extrabold text-slate-900">Custom</span>
+            </div>
+            <ul class="mt-8 space-y-3">
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                All modules
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                SSO / SAML
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Custom integrations
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                SLA guarantee
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Dedicated success manager
+              </li>
+            </ul>
+            <a href="/contact" class="mt-8 block rounded-lg border border-slate-300 py-2.5 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-colors">
+              Contact Sales
+            </a>
+          </div>
+        </div>
+
+        <!-- Bundle Discount -->
+        <div class="reveal mt-12 rounded-2xl bg-gradient-to-r from-[#0D9488]/5 to-[#0F766E]/5 border border-[#0D9488]/20 p-8 text-center">
+          <h3 class="text-lg font-bold text-slate-900">Bundle &amp; Save</h3>
+          <p class="mt-2 text-sm text-slate-600">The more modules you add, the more you save.</p>
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-6">
+            <div class="text-center">
+              <span class="block text-2xl font-extrabold text-[#0D9488]">15%</span>
+              <span class="text-xs text-slate-500">2+ modules</span>
+            </div>
+            <div class="text-center">
+              <span class="block text-2xl font-extrabold text-[#0D9488]">25%</span>
+              <span class="text-xs text-slate-500">3+ modules</span>
+            </div>
+            <div class="text-center">
+              <span class="block text-2xl font-extrabold text-[#0D9488]">35%</span>
+              <span class="text-xs text-slate-500">5+ modules</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CROSS-SELL ============ -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">Complete Your Quality Ecosystem</h2>
+          <p class="mt-3 text-base text-slate-600">vinQuality works even better with the rest of the vinReliability platform.</p>
+        </div>
+        <div class="reveal mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
+          <a href="/fmea" class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#2563EB]/10">
+              <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <h3 class="mt-3 text-base font-bold text-slate-900 group-hover:text-[#2563EB] transition-colors">vinFMEA</h3>
+            <p class="mt-1 text-sm text-slate-600">Link predicted failure modes to real non-conformances for true closed-loop quality.</p>
+          </a>
+          <a href="/reliability" class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#6366F1]/10">
+              <svg class="h-5 w-5 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="mt-3 text-base font-bold text-slate-900 group-hover:text-[#6366F1] transition-colors">vinReliability</h3>
+            <p class="mt-1 text-sm text-slate-600">Analyze quality data with 60+ statistical tools including Weibull, SPC, and DOE.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-20 sm:py-28 bg-gradient-to-br from-[#0D9488] to-[#0F766E]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-3xl text-center">
+          <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Modernize Your Quality Management?</h2>
+          <p class="mt-4 text-lg text-white/80">Get started with a free trial. No credit card required.</p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-[#0D9488] shadow-lg hover:bg-slate-50 transition-colors w-full sm:w-auto"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto"
+            >
+              Schedule Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,339 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "vinReliability",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "Professional statistical analysis software with 60+ tools including Weibull analysis, SPC, DOE, hypothesis testing, and reliability engineering.",
+  "url": "https://vinqms.com/reliability",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "USD",
+    "price": "999",
+    "priceValidUntil": "2027-12-31"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "vinReliability LLC"
+  }
+});
+
+const categories = [
+  {
+    title: "Design of Experiments (DOE)",
+    color: "#6366F1",
+    desc: "Full and fractional factorial designs, response surface methodology, Taguchi methods, and mixture designs. Optimize products and processes with statistical rigor.",
+    icon: "experiment"
+  },
+  {
+    title: "Time Series & Forecasting",
+    color: "#2563EB",
+    desc: "ARIMA modeling, exponential smoothing, seasonal decomposition, and trend analysis. Forecast demand, failures, and performance over time.",
+    icon: "trend"
+  },
+  {
+    title: "Quality & SPC",
+    color: "#0D9488",
+    desc: "Process capability analysis (Cp, Cpk, Pp, Ppk), control charts (X-bar, R, S, P, C, U), gauge R&R, and measurement system analysis.",
+    icon: "spc"
+  },
+  {
+    title: "Statistics & Hypothesis Testing",
+    color: "#F59E0B",
+    desc: "t-tests, ANOVA, chi-square tests, non-parametric tests, confidence intervals, and sample size determination for rigorous decision-making.",
+    icon: "hypothesis"
+  },
+  {
+    title: "Multivariate Regression",
+    color: "#10B981",
+    desc: "Linear, polynomial, and logistic regression with residual analysis, prediction intervals, model comparison, and variable selection methods.",
+    icon: "regression"
+  },
+  {
+    title: "Reliability & Survival Analysis",
+    color: "#EF4444",
+    desc: "Weibull and lognormal analysis, Kaplan-Meier estimation, accelerated life testing, warranty prediction, and system reliability modeling.",
+    icon: "reliability"
+  }
+];
+---
+
+<BaseLayout
+  title="vinReliability — Professional Statistical Analysis Software | vinReliability LLC"
+  description="60+ statistical analysis tools including Weibull, SPC, DOE, hypothesis testing, and reliability engineering. Professional alternative to Minitab at a fraction of the cost."
+  keywords="statistical analysis software, Weibull analysis, SPC, process capability, DOE, design of experiments, reliability engineering, Minitab alternative, hypothesis testing"
+  canonical="/reliability"
+  jsonLd={jsonLd}
+>
+  <Header />
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden bg-[#0F172A]">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-[#6366F1] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-1/3 w-80 h-80 bg-[#84CC16] rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div class="reveal mx-auto max-w-4xl text-center">
+          <span class="inline-flex items-center rounded-full border border-[#6366F1]/30 bg-[#6366F1]/10 px-4 py-1.5 text-sm font-medium text-[#A5B4FC]">
+            60+ Statistical Analysis Tools
+          </span>
+          <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Professional Statistical<br />Analysis Made Easy
+          </h1>
+          <p class="mt-6 text-lg text-slate-300 sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            The complete toolkit for reliability engineers, quality engineers, and data analysts. From Weibull analysis to DOE, everything you need in one application.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg bg-[#6366F1] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#6366F1]/25 hover:bg-[#4F46E5] transition-colors w-full sm:w-auto"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="#pricing"
+              class="inline-flex items-center justify-center rounded-lg border border-slate-500 px-6 py-3 text-base font-semibold text-slate-200 hover:bg-white/5 transition-colors w-full sm:w-auto"
+            >
+              See Pricing
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURE CATEGORIES ============ -->
+    <section class="py-20 sm:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Comprehensive Analysis Toolkit</h2>
+          <p class="mt-4 text-lg text-slate-600">Six powerful categories covering every aspect of statistical and reliability analysis.</p>
+        </div>
+        <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {categories.map((cat) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-8 hover:shadow-md transition-shadow">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl" style={`background-color: ${cat.color}15;`}>
+                {cat.icon === "experiment" && (
+                  <svg class="h-6 w-6" style={`color: ${cat.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                  </svg>
+                )}
+                {cat.icon === "trend" && (
+                  <svg class="h-6 w-6" style={`color: ${cat.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                )}
+                {cat.icon === "spc" && (
+                  <svg class="h-6 w-6" style={`color: ${cat.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                )}
+                {cat.icon === "hypothesis" && (
+                  <svg class="h-6 w-6" style={`color: ${cat.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                )}
+                {cat.icon === "regression" && (
+                  <svg class="h-6 w-6" style={`color: ${cat.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                  </svg>
+                )}
+                {cat.icon === "reliability" && (
+                  <svg class="h-6 w-6" style={`color: ${cat.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                )}
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-slate-900">{cat.title}</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">{cat.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPARISON vs MINITAB ============ -->
+    <section class="py-20 sm:py-28 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">How We Compare</h2>
+          <p class="mt-4 text-lg text-slate-600">Professional-grade analysis at a fraction of the cost.</p>
+        </div>
+        <div class="reveal mt-16 max-w-4xl mx-auto">
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white">
+            <!-- Header Row -->
+            <div class="grid grid-cols-3 bg-slate-50 border-b border-slate-200">
+              <div class="p-4 sm:p-6 text-sm font-semibold text-slate-500">Feature</div>
+              <div class="p-4 sm:p-6 text-center">
+                <span class="text-sm font-bold text-[#6366F1]">vinReliability</span>
+              </div>
+              <div class="p-4 sm:p-6 text-center">
+                <span class="text-sm font-bold text-slate-400">Minitab</span>
+              </div>
+            </div>
+            <!-- Price -->
+            <div class="grid grid-cols-3 border-b border-slate-100">
+              <div class="p-4 sm:p-6 text-sm text-slate-700 font-medium">Annual Price</div>
+              <div class="p-4 sm:p-6 text-center">
+                <span class="text-lg font-extrabold text-[#6366F1]">$999</span>
+                <span class="text-xs text-slate-500">/yr</span>
+              </div>
+              <div class="p-4 sm:p-6 text-center">
+                <span class="text-lg font-extrabold text-slate-400">~$1,610</span>
+                <span class="text-xs text-slate-500">/yr</span>
+              </div>
+            </div>
+            <!-- Tools -->
+            <div class="grid grid-cols-3 border-b border-slate-100">
+              <div class="p-4 sm:p-6 text-sm text-slate-700 font-medium">Statistical Tools</div>
+              <div class="p-4 sm:p-6 text-center text-sm text-slate-700">60+ tools</div>
+              <div class="p-4 sm:p-6 text-center text-sm text-slate-500">Similar coverage</div>
+            </div>
+            <!-- Plots -->
+            <div class="grid grid-cols-3 border-b border-slate-100">
+              <div class="p-4 sm:p-6 text-sm text-slate-700 font-medium">Plot Output</div>
+              <div class="p-4 sm:p-6 text-center">
+                <span class="inline-flex items-center gap-1 text-sm text-[#6366F1] font-medium">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  Interactive HTML
+                </span>
+              </div>
+              <div class="p-4 sm:p-6 text-center text-sm text-slate-500">Static plots</div>
+            </div>
+            <!-- Lock-in -->
+            <div class="grid grid-cols-3 border-b border-slate-100">
+              <div class="p-4 sm:p-6 text-sm text-slate-700 font-medium">Subscription Lock-in</div>
+              <div class="p-4 sm:p-6 text-center">
+                <span class="inline-flex items-center gap-1 text-sm text-[#10B981] font-medium">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  No lock-in
+                </span>
+              </div>
+              <div class="p-4 sm:p-6 text-center text-sm text-slate-500">Annual required</div>
+            </div>
+            <!-- Savings -->
+            <div class="grid grid-cols-3 bg-[#6366F1]/5">
+              <div class="p-4 sm:p-6 text-sm text-slate-700 font-bold">Annual Savings</div>
+              <div class="p-4 sm:p-6 text-center">
+                <span class="text-lg font-extrabold text-[#10B981]">$611+</span>
+                <span class="text-xs text-slate-500">/yr</span>
+              </div>
+              <div class="p-4 sm:p-6 text-center text-sm text-slate-400">&mdash;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="py-20 sm:py-28 bg-white" id="pricing">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Simple Pricing</h2>
+          <p class="mt-4 text-lg text-slate-600">One product. One price. Everything included.</p>
+        </div>
+        <div class="reveal mt-16 max-w-lg mx-auto">
+          <div class="relative rounded-2xl border-2 border-[#6366F1] bg-white p-10 shadow-lg shadow-[#6366F1]/10 text-center">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+              <span class="inline-block rounded-full bg-[#6366F1] px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">Best Value</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">vinReliability</h3>
+            <div class="mt-4">
+              <span class="text-5xl font-extrabold text-slate-900">$999</span>
+              <span class="text-lg text-slate-500">/year</span>
+            </div>
+            <p class="mt-3 text-sm text-slate-500">Per-seat license. Volume discounts available.</p>
+            <ul class="mt-8 space-y-3 text-left">
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                All 60+ statistical tools
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                1-year license with free updates
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Interactive HTML plots
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                Email support
+              </li>
+              <li class="flex items-start gap-2 text-sm text-slate-600">
+                <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                No subscription lock-in
+              </li>
+            </ul>
+            <a href="/contact" class="mt-8 block rounded-lg bg-[#6366F1] py-3 text-center text-base font-semibold text-white shadow-sm hover:bg-[#4F46E5] transition-colors">
+              Start Free Trial
+            </a>
+            <p class="mt-4 text-xs text-slate-400">Network/floating licenses available for teams. Contact sales for volume pricing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CROSS-SELL ============ -->
+    <section class="py-16 sm:py-20 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">Better Together</h2>
+          <p class="mt-3 text-base text-slate-600">Combine vinReliability with the rest of the platform for maximum impact.</p>
+        </div>
+        <div class="reveal mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
+          <a href="/quality" class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0D9488]/10">
+              <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="mt-3 text-base font-bold text-slate-900 group-hover:text-[#0D9488] transition-colors">vinQuality</h3>
+            <p class="mt-1 text-sm text-slate-600">Feed quality data from NCMRs and CAPAs directly into statistical analysis.</p>
+          </a>
+          <a href="/fmea" class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#2563EB]/10">
+              <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <h3 class="mt-3 text-base font-bold text-slate-900 group-hover:text-[#2563EB] transition-colors">vinFMEA</h3>
+            <p class="mt-1 text-sm text-slate-600">Validate FMEA risk ratings with real failure data and reliability predictions.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-20 sm:py-28 bg-gradient-to-br from-[#6366F1] to-[#4F46E5]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-3xl text-center">
+          <h2 class="text-3xl font-bold text-white sm:text-4xl">Start Analyzing with Confidence</h2>
+          <p class="mt-4 text-lg text-white/80">Try vinReliability free for 14 days. No credit card required.</p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-[#6366F1] shadow-lg hover:bg-slate-50 transition-colors w-full sm:w-auto"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="#pricing"
+              class="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto"
+            >
+              See Pricing
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

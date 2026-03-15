@@ -1,0 +1,158 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="About — vinReliability"
+  description="vinReliability LLC builds engineering software for quality and reliability professionals."
+  keywords="vinReliability, about, quality engineering software, reliability software company"
+  canonical="/about"
+>
+  <Header />
+
+  <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-slate-50 to-white py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <div class="reveal">
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+            About vinReliability
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">
+            Engineering software built for quality and reliability professionals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal">
+          <h2 class="text-3xl font-bold text-slate-900">Our Story</h2>
+          <div class="mt-6 space-y-4 text-base text-slate-600 leading-relaxed">
+            <p>
+              vinReliability LLC builds engineering software that helps manufacturers design better products, catch quality issues faster, and make data-driven decisions. Our tools are used by quality engineers, reliability engineers, and data analysts worldwide.
+            </p>
+            <p>
+              We understand the challenges of managing quality in regulated industries. Our products are designed by engineers who have worked on the factory floor, led CAPA investigations, and built reliability test programs. That hands-on experience shapes every feature we build.
+            </p>
+            <p>
+              From small machine shops tracking nonconformances to multinational manufacturers running enterprise-wide FMEA programs, our goal is the same: give every team access to professional-grade tools without the complexity and cost of legacy systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Products -->
+    <section class="py-16 sm:py-20 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Our Products</h2>
+          <p class="mt-3 text-lg text-slate-600">Three products, one mission: better quality and reliability engineering.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- vinQuality -->
+          <div class="reveal reveal-d1 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0D9488]/10">
+              <svg class="h-6 w-6 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="mt-4 text-xl font-bold text-slate-900">vinQuality</h3>
+            <p class="mt-1 text-sm font-medium text-[#0D9488]">Quality Management System</p>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Cloud-based QMS for managing NCMRs, Deviations, CAPAs, and SCARs. Configurable workflows, audit trails, SLA tracking, and real-time dashboards keep your quality program on track.
+            </p>
+            <a href="/quality" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[#0D9488] hover:text-[#0F766E] transition-colors">
+              Learn more
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </a>
+          </div>
+
+          <!-- vinFMEA -->
+          <div class="reveal reveal-d2 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10">
+              <svg class="h-6 w-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <h3 class="mt-4 text-xl font-bold text-slate-900">vinFMEA</h3>
+            <p class="mt-1 text-sm font-medium text-amber-600">FMEA &amp; Control Plan Suite</p>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Design FMEA, Process FMEA, and FMEA-MSR analysis with AIAG-VDA aligned worksheets. Integrated control plans, risk matrices, and action tracking in one tool.
+            </p>
+            <a href="/fmea" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[#0D9488] hover:text-[#0F766E] transition-colors">
+              Learn more
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </a>
+          </div>
+
+          <!-- vinReliability -->
+          <div class="reveal reveal-d3 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10">
+              <svg class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="mt-4 text-xl font-bold text-slate-900">vinReliability</h3>
+            <p class="mt-1 text-sm font-medium text-blue-600">Statistical Analysis</p>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Desktop software for Weibull analysis, life data modeling, accelerated life testing, reliability prediction, and over 60 statistical tools for engineering decision-making.
+            </p>
+            <a href="/reliability" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[#0D9488] hover:text-[#0F766E] transition-colors">
+              Learn more
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <div class="reveal">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Our Mission</h2>
+          <blockquote class="mt-8 text-xl sm:text-2xl font-medium text-slate-700 leading-relaxed">
+            Our mission is to make professional quality and reliability engineering tools accessible and affordable for teams of every size.
+          </blockquote>
+          <div class="mt-8 flex items-center justify-center gap-2">
+            <div class="h-1 w-16 rounded-full bg-[#0D9488]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="py-16 sm:py-20 bg-slate-50">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+        <div class="reveal">
+          <h2 class="text-3xl font-bold text-slate-900">Get in Touch</h2>
+          <p class="mt-4 text-base text-slate-600">
+            Have questions about our products? We would love to hear from you.
+          </p>
+          <div class="mt-8 space-y-3">
+            <p class="text-base text-slate-700">
+              <span class="font-semibold">Email:</span>
+              <a href="mailto:support@vinreliability.net" class="text-[#0D9488] hover:text-[#0F766E] transition-colors">support@vinreliability.net</a>
+            </p>
+            <p class="text-base text-slate-700">
+              <span class="font-semibold">Website:</span>
+              <a href="https://vinqms.com" class="text-[#0D9488] hover:text-[#0F766E] transition-colors">vinqms.com</a>
+            </p>
+          </div>
+          <a href="/contact" class="mt-8 inline-flex items-center justify-center rounded-lg bg-[#0D9488] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

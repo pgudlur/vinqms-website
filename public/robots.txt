@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vinqms.com/sitemap-index.xml

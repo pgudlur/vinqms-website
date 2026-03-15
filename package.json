@@ -1,0 +1,17 @@
+{
+  "name": "vinqms-website",
+  "version": "1.0.0",
+  "description": "vinReliability LLC — Quality & Reliability Engineering Platform",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^6.0.4",
+    "tailwindcss": "^4.2.1"
+  }
+}

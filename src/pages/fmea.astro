@@ -1,0 +1,315 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "vinFMEA",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "Professional FMEA & Control Plan Suite. AIAG-VDA compliant with 4-level traceability, ISO 26262 functional safety, and 8-language support.",
+  "url": "https://vinqms.com/fmea",
+  "publisher": {
+    "@type": "Organization",
+    "name": "vinReliability LLC"
+  }
+});
+
+const features = [
+  { title: "System FMEA (SFMEA)", color: "#EF4444", desc: "Analyze system-level interactions, interfaces, and failure propagation across subsystems with structured worksheets and risk matrices." },
+  { title: "Design FMEA (DFMEA)", color: "#2563EB", desc: "Identify design-related failure modes, evaluate severity, occurrence, and detection ratings, and define recommended actions." },
+  { title: "Process FMEA (PFMEA)", color: "#10B981", desc: "Analyze manufacturing process steps for potential failures, define process controls, and link to control plans." },
+  { title: "Control Plans", color: "#7C3AED", desc: "Generate control plans directly from PFMEA outputs with automatic traceability to process characteristics and special characteristics." },
+  { title: "ISO 26262 Safety", color: "#F97316", desc: "Functional safety analysis with ASIL classification, diagnostic coverage calculations, and safety goal decomposition." },
+  { title: "8-Language UI", color: "#06B6D4", desc: "Full interface localization in English, German, French, Spanish, Portuguese, Chinese, Japanese, and Korean." },
+  { title: "Risk Matrix & Dashboard", color: "#10B981", desc: "Visual risk matrices with customizable severity, occurrence, and detection scales. Real-time action priority dashboards." },
+  { title: "Floating Licenses", color: "#EAB308", desc: "Network-based floating license management. Share licenses across teams to maximize utilization and minimize cost." },
+  { title: "Report Builder", color: "#6366F1", desc: "Customizable report templates with automatic formatting, cross-references, and export to PDF, Excel, and Word." }
+];
+
+const standards = [
+  { name: "AIAG & VDA", desc: "Full compliance with the harmonized AIAG-VDA FMEA handbook methodology, including the 7-step approach and Action Priority (AP) rating system." },
+  { name: "ISO 26262", desc: "Functional safety support for automotive systems with ASIL classification, safety goal management, and diagnostic coverage analysis." },
+  { name: "IATF 16949", desc: "Automotive quality management system requirements including APQP integration, special characteristics, and customer-specific requirements." },
+  { name: "APQP", desc: "Advanced Product Quality Planning integration with phase-gate milestones, deliverable tracking, and cross-functional team management." }
+];
+---
+
+<BaseLayout
+  title="vinFMEA — Professional FMEA & Control Plan Suite | vinReliability"
+  description="AIAG-VDA compliant FMEA software with 4-level traceability, ISO 26262 functional safety, control plan generation, and 8-language support."
+  keywords="FMEA software, AIAG-VDA, DFMEA, PFMEA, SFMEA, control plan, ISO 26262, functional safety, IATF 16949, failure mode effects analysis"
+  canonical="/fmea"
+  jsonLd={jsonLd}
+>
+  <Header />
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-1/3 w-96 h-96 bg-[#2563EB] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-[#F97316] rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div class="reveal mx-auto max-w-4xl text-center">
+          <span class="inline-flex items-center rounded-full border border-[#2563EB]/30 bg-[#2563EB]/10 px-4 py-1.5 text-sm font-medium text-[#93C5FD]">
+            AIAG-VDA &amp; ISO 26262 Compliant
+          </span>
+          <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Professional FMEA &amp;<br />Control Plan Suite
+          </h1>
+          <p class="mt-6 text-lg text-slate-300 sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            Complete failure mode and effects analysis with 4-level traceability from System FMEA through Control Plans. Built for automotive, aerospace, and medical device manufacturers.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg bg-[#2563EB] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#2563EB]/25 hover:bg-[#1D4ED8] transition-colors w-full sm:w-auto"
+            >
+              Start 14-Day Free Trial
+            </a>
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg border border-slate-500 px-6 py-3 text-base font-semibold text-slate-200 hover:bg-white/5 transition-colors w-full sm:w-auto"
+            >
+              Request a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES GRID ============ -->
+    <section class="py-20 sm:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Complete FMEA Toolkit</h2>
+          <p class="mt-4 text-lg text-slate-600">Everything you need for professional failure mode analysis and risk management.</p>
+        </div>
+        <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg" style={`background-color: ${feature.color}15;`}>
+                {feature.title.includes("System") && (
+                  <svg class="h-5 w-5" style={`color: ${feature.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                )}
+                {feature.title.includes("Design") && (
+                  <svg class="h-5 w-5" style={`color: ${feature.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                  </svg>
+                )}
+                {feature.title.includes("Process FMEA") && (
+                  <svg class="h-5 w-5" style={`color: ${feature.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                )}
+                {feature.title.includes("Control") && (
+                  <svg class="h-5 w-5" style={`color: ${feature.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                )}
+                {feature.title.includes("Safety") && (
+                  <svg class="h-5 w-5" style={`color: ${feature.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                )}
+                {feature.title.includes("Language") && (
+                  <svg class="h-5 w-5" style={`color: ${feature.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                  </svg>
+                )}
+                {feature.title.includes("Risk") && (
+                  <svg class="h-5 w-5" style={`color: ${feature.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  </svg>
+                )}
+                {feature.title.includes("Floating") && (
+                  <svg class="h-5 w-5" style={`color: ${feature.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                  </svg>
+                )}
+                {feature.title.includes("Report") && (
+                  <svg class="h-5 w-5" style={`color: ${feature.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                )}
+              </div>
+              <h3 class="mt-4 text-base font-bold text-slate-900">{feature.title}</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRACEABILITY ============ -->
+    <section class="py-20 sm:py-28 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">4-Level Traceability</h2>
+          <p class="mt-4 text-lg text-slate-600">Full traceability from system-level analysis through to production control plans.</p>
+        </div>
+        <div class="reveal mt-16">
+          <!-- Desktop Flow -->
+          <div class="hidden md:flex items-center justify-center gap-4">
+            <div class="flex-1 rounded-2xl border-2 border-[#EF4444]/30 bg-white p-6 text-center">
+              <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#EF4444]/10">
+                <span class="text-lg font-extrabold text-[#EF4444]">1</span>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-slate-900">SFMEA</h3>
+              <p class="mt-1 text-sm text-slate-500">System FMEA</p>
+              <p class="mt-2 text-xs text-slate-400">System-level failure analysis and interface risks</p>
+            </div>
+            <svg class="h-6 w-6 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            <div class="flex-1 rounded-2xl border-2 border-[#2563EB]/30 bg-white p-6 text-center">
+              <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#2563EB]/10">
+                <span class="text-lg font-extrabold text-[#2563EB]">2</span>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-slate-900">DFMEA</h3>
+              <p class="mt-1 text-sm text-slate-500">Design FMEA</p>
+              <p class="mt-2 text-xs text-slate-400">Component-level design failure analysis</p>
+            </div>
+            <svg class="h-6 w-6 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            <div class="flex-1 rounded-2xl border-2 border-[#10B981]/30 bg-white p-6 text-center">
+              <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#10B981]/10">
+                <span class="text-lg font-extrabold text-[#10B981]">3</span>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-slate-900">PFMEA</h3>
+              <p class="mt-1 text-sm text-slate-500">Process FMEA</p>
+              <p class="mt-2 text-xs text-slate-400">Manufacturing process failure analysis</p>
+            </div>
+            <svg class="h-6 w-6 shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            <div class="flex-1 rounded-2xl border-2 border-[#7C3AED]/30 bg-white p-6 text-center">
+              <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#7C3AED]/10">
+                <span class="text-lg font-extrabold text-[#7C3AED]">4</span>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-slate-900">Control Plan</h3>
+              <p class="mt-1 text-sm text-slate-500">Production Controls</p>
+              <p class="mt-2 text-xs text-slate-400">Process controls and inspection methods</p>
+            </div>
+          </div>
+
+          <!-- Mobile Flow -->
+          <div class="flex md:hidden flex-col items-center gap-4">
+            <div class="w-full rounded-2xl border-2 border-[#EF4444]/30 bg-white p-6 text-center">
+              <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#EF4444]/10">
+                <span class="text-lg font-extrabold text-[#EF4444]">1</span>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-slate-900">SFMEA</h3>
+              <p class="mt-1 text-sm text-slate-500">System-level failure analysis</p>
+            </div>
+            <svg class="h-6 w-6 text-slate-400 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            <div class="w-full rounded-2xl border-2 border-[#2563EB]/30 bg-white p-6 text-center">
+              <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#2563EB]/10">
+                <span class="text-lg font-extrabold text-[#2563EB]">2</span>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-slate-900">DFMEA</h3>
+              <p class="mt-1 text-sm text-slate-500">Component-level design analysis</p>
+            </div>
+            <svg class="h-6 w-6 text-slate-400 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            <div class="w-full rounded-2xl border-2 border-[#10B981]/30 bg-white p-6 text-center">
+              <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#10B981]/10">
+                <span class="text-lg font-extrabold text-[#10B981]">3</span>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-slate-900">PFMEA</h3>
+              <p class="mt-1 text-sm text-slate-500">Manufacturing process analysis</p>
+            </div>
+            <svg class="h-6 w-6 text-slate-400 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            <div class="w-full rounded-2xl border-2 border-[#7C3AED]/30 bg-white p-6 text-center">
+              <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#7C3AED]/10">
+                <span class="text-lg font-extrabold text-[#7C3AED]">4</span>
+              </div>
+              <h3 class="mt-3 text-base font-bold text-slate-900">Control Plan</h3>
+              <p class="mt-1 text-sm text-slate-500">Production controls and inspection</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STANDARDS ============ -->
+    <section class="py-20 sm:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Standards Compliance</h2>
+          <p class="mt-4 text-lg text-slate-600">Built to meet the standards your industry demands.</p>
+        </div>
+        <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {standards.map((std) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-8 hover:shadow-md transition-shadow">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#2563EB]/10">
+                <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-slate-900">{std.name}</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">{std.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CROSS-SELL ============ -->
+    <section class="py-16 sm:py-20 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">Complete Your Engineering Toolkit</h2>
+          <p class="mt-3 text-base text-slate-600">vinFMEA integrates with the full vinReliability platform.</p>
+        </div>
+        <div class="reveal mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
+          <a href="/quality" class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0D9488]/10">
+              <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="mt-3 text-base font-bold text-slate-900 group-hover:text-[#0D9488] transition-colors">vinQuality</h3>
+            <p class="mt-1 text-sm text-slate-600">Connect predicted failure modes to real-world NCMRs and CAPAs for closed-loop quality.</p>
+          </a>
+          <a href="/reliability" class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+            <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#6366F1]/10">
+              <svg class="h-5 w-5 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <h3 class="mt-3 text-base font-bold text-slate-900 group-hover:text-[#6366F1] transition-colors">vinReliability</h3>
+            <p class="mt-1 text-sm text-slate-600">Validate FMEA risk ratings with statistical analysis, Weibull modeling, and reliability predictions.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-20 sm:py-28 bg-gradient-to-br from-[#2563EB] to-[#1D4ED8]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-3xl text-center">
+          <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Transform Your FMEA Process?</h2>
+          <p class="mt-4 text-lg text-white/80">Start your 14-day free trial today. No credit card required.</p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-[#2563EB] shadow-lg hover:bg-slate-50 transition-colors w-full sm:w-auto"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto"
+            >
+              Request a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
