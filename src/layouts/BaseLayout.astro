@@ -58,20 +58,62 @@ const pageUrl = canonical ? `${siteUrl}${canonical}` : siteUrl;
   <body class="min-h-screen bg-white text-slate-900 font-sans antialiased">
     <slot />
 
-    <!-- Scroll-reveal observer -->
+    <!-- Scroll-reveal observer + counters + FAQ -->
     <script>
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add('in-view');
+              // Trigger counter animation
+              if (entry.target.hasAttribute('data-count-to')) {
+                entry.target.style.setProperty('--target', entry.target.getAttribute('data-count-to'));
+              }
               observer.unobserve(entry.target);
             }
           });
         },
         { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
       );
-      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+      document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach((el) => observer.observe(el));
+
+      // FAQ accordion toggle — using inline styles since Tailwind CSS 4 layers override custom classes
+      document.querySelectorAll('.faq-answer').forEach((el) => {
+        el.style.maxHeight = '0';
+        el.style.overflow = 'hidden';
+        el.style.transition = 'max-height 0.3s ease-out, padding 0.3s ease-out';
+        el.style.paddingTop = '0';
+        el.style.paddingBottom = '0';
+      });
+      document.querySelectorAll('.faq-chevron').forEach((el) => {
+        el.style.transition = 'transform 0.3s ease-out';
+      });
+      document.querySelectorAll('.faq-toggle').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const parent = btn.parentElement;
+          const answer = parent.querySelector('.faq-answer');
+          const chevron = parent.querySelector('.faq-chevron');
+          const isOpen = answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '0';
+          if (isOpen) {
+            answer.style.maxHeight = '0';
+            answer.style.paddingTop = '0';
+            answer.style.paddingBottom = '0';
+          } else {
+            answer.style.paddingTop = '';
+            answer.style.paddingBottom = '';
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+          if (chevron) chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+      });
+
+      // Header scroll shadow
+      const header = document.querySelector('header');
+      if (header) {
+        window.addEventListener('scroll', () => {
+          header.classList.toggle('header-scrolled', window.scrollY > 10);
+        }, { passive: true });
+      }
     </script>
   </body>
 </html>

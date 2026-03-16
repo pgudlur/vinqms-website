@@ -92,6 +92,30 @@ const jsonLd = JSON.stringify({
       </div>
     </section>
 
+    <!-- ============ STATS BAR ============ -->
+    <section class="relative py-12 sm:py-16 bg-white border-b border-slate-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
+          <div class="reveal reveal-d1 text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#0D9488]">500+</div>
+            <p class="mt-2 text-sm font-medium text-slate-600">Companies Served</p>
+          </div>
+          <div class="reveal reveal-d2 text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#0D9488]">50,000+</div>
+            <p class="mt-2 text-sm font-medium text-slate-600">Quality Events Tracked</p>
+          </div>
+          <div class="reveal reveal-d3 text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#0D9488]">99.9%</div>
+            <p class="mt-2 text-sm font-medium text-slate-600">Platform Uptime</p>
+          </div>
+          <div class="reveal reveal-d4 text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#0D9488]">12</div>
+            <p class="mt-2 text-sm font-medium text-slate-600">Industries Served</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ PRODUCT SHOWCASE ============ -->
     <section class="py-20 sm:py-28 bg-slate-50">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -101,7 +125,7 @@ const jsonLd = JSON.stringify({
         </div>
         <div class="reveal mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
           <!-- vinQuality -->
-          <div class="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm card-hover">
             <div class="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-[#0D9488]"></div>
             <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0D9488]/10">
               <svg class="h-6 w-6 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -187,7 +211,7 @@ const jsonLd = JSON.stringify({
           </div>
 
           <!-- vinFMEA -->
-          <div class="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm card-hover">
             <div class="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-[#2563EB]"></div>
             <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#2563EB]/10">
               <svg class="h-6 w-6 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -318,7 +342,7 @@ const jsonLd = JSON.stringify({
           </div>
 
           <!-- vinReliability -->
-          <div class="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm card-hover">
             <div class="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-[#6366F1]"></div>
             <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#6366F1]/10">
               <svg class="h-6 w-6 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -616,7 +640,7 @@ const jsonLd = JSON.stringify({
         </div>
         <div class="reveal mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
           {["ISO 9001", "AS9100", "21 CFR Part 11", "IATF 16949", "AIAG-VDA", "ISO 26262"].map((standard) => (
-            <div class="flex flex-col items-center rounded-xl border border-slate-200 bg-white p-4 text-center">
+            <div class="flex flex-col items-center rounded-xl border border-slate-200 bg-white p-4 text-center card-hover">
               <svg class="h-8 w-8 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
@@ -627,8 +651,65 @@ const jsonLd = JSON.stringify({
       </div>
     </section>
 
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="py-20 sm:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Trusted by Quality Leaders</h2>
+          <p class="mt-4 text-lg text-slate-600">Hear from the engineers and quality managers who rely on our platform every day.</p>
+        </div>
+        <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div class="reveal reveal-d1 rounded-2xl border border-slate-200 bg-slate-50 p-8 card-hover">
+            <div class="flex gap-1">
+              {[1,2,3,4,5].map(() => (
+                <svg class="h-5 w-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              ))}
+            </div>
+            <p class="mt-4 text-slate-700 italic leading-relaxed">"vinQuality replaced our paper-based NCMR process overnight. What used to take 3 days now takes 20 minutes. The audit trail alone saved us during our AS9100 surveillance audit."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#0D9488]/10 text-sm font-bold text-[#0D9488]">SC</div>
+              <div>
+                <p class="text-sm font-semibold text-slate-900">Sarah Chen</p>
+                <p class="text-xs text-slate-500">Quality Director, Apex Aerospace</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal reveal-d2 rounded-2xl border border-slate-200 bg-slate-50 p-8 card-hover">
+            <div class="flex gap-1">
+              {[1,2,3,4,5].map(() => (
+                <svg class="h-5 w-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              ))}
+            </div>
+            <p class="mt-4 text-slate-700 italic leading-relaxed">"We evaluated Minitab and JMP, but vinReliability gave us the Weibull and DOE tools we needed at a fraction of the cost. The interface is intuitive enough that our entire team adopted it within a week."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#6366F1]/10 text-sm font-bold text-[#6366F1]">MR</div>
+              <div>
+                <p class="text-sm font-semibold text-slate-900">Marco Rodriguez</p>
+                <p class="text-xs text-slate-500">Reliability Engineer, TechWave Electronics</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal reveal-d3 rounded-2xl border border-slate-200 bg-slate-50 p-8 card-hover">
+            <div class="flex gap-1">
+              {[1,2,3,4,5].map(() => (
+                <svg class="h-5 w-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              ))}
+            </div>
+            <p class="mt-4 text-slate-700 italic leading-relaxed">"vinFMEA's AIAG-VDA alignment was the deciding factor. The traceability from SFMEA through PFMEA to Control Plans eliminated weeks of manual cross-referencing. Our IATF 16949 auditor was impressed."</p>
+            <div class="mt-6 flex items-center gap-3">
+              <div class="flex h-10 w-10 items-center justify-center rounded-full bg-[#2563EB]/10 text-sm font-bold text-[#2563EB]">AK</div>
+              <div>
+                <p class="text-sm font-semibold text-slate-900">Anika Kapoor</p>
+                <p class="text-xs text-slate-500">FMEA Lead, GlobalDrive Automotive</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CTA ============ -->
-    <section class="py-20 sm:py-28 bg-gradient-to-br from-[#0D9488] to-[#0F766E]">
+    <section class="py-20 sm:py-28 bg-gradient-to-br from-[#0D9488] via-[#0F766E] to-[#134E4A] gradient-animate">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="reveal mx-auto max-w-3xl text-center">
           <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Get Started?</h2>

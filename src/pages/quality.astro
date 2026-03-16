@@ -320,6 +320,19 @@ const modules = [
       </div>
     </section>
 
+    <!-- ============ INDUSTRY TRUST LINE ============ -->
+    <section class="py-8 bg-white border-b border-slate-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p class="reveal text-center text-sm font-medium text-slate-500">
+          Trusted by quality teams in
+          <span class="text-slate-700 font-semibold">aerospace</span>,
+          <span class="text-slate-700 font-semibold">medical devices</span>,
+          <span class="text-slate-700 font-semibold">automotive</span>, and
+          <span class="text-slate-700 font-semibold">electronics manufacturing</span>
+        </p>
+      </div>
+    </section>
+
     <!-- ============ FEATURES GRID ============ -->
     <section class="py-20 sm:py-28 bg-slate-50">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -329,7 +342,7 @@ const modules = [
         </div>
         <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 card-hover">
               <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0D9488]/10">
                 {feature.icon === "signature" && (
                   <svg class="h-5 w-5 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -395,7 +408,7 @@ const modules = [
         </div>
         <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {modules.map((mod) => (
-            <div class="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 card-hover">
               <div class="flex h-10 w-10 items-center justify-center rounded-lg" style={`background-color: ${mod.color}15;`}>
                 <svg class="h-5 w-5" style={`color: ${mod.color};`} fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
@@ -583,7 +596,7 @@ const modules = [
           <p class="mt-3 text-base text-slate-600">vinQuality works even better with the rest of the vinReliability platform.</p>
         </div>
         <div class="reveal mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
-          <a href="/fmea" class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+          <a href="/fmea" class="group rounded-2xl border border-slate-200 bg-white p-6 card-hover">
             <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#2563EB]/10">
               <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
@@ -592,7 +605,7 @@ const modules = [
             <h3 class="mt-3 text-base font-bold text-slate-900 group-hover:text-[#2563EB] transition-colors">vinFMEA</h3>
             <p class="mt-1 text-sm text-slate-600">Link predicted failure modes to real non-conformances for true closed-loop quality.</p>
           </a>
-          <a href="/reliability" class="group rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+          <a href="/reliability" class="group rounded-2xl border border-slate-200 bg-white p-6 card-hover">
             <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#6366F1]/10">
               <svg class="h-5 w-5 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -605,8 +618,74 @@ const modules = [
       </div>
     </section>
 
+    <!-- ============ FAQ ============ -->
+    <section class="py-20 sm:py-28 bg-slate-50">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Frequently Asked Questions</h2>
+          <p class="mt-4 text-lg text-slate-600">Everything you need to know about vinQuality.</p>
+        </div>
+        <div class="mt-12 space-y-4">
+          <div class="reveal reveal-d1 rounded-xl border border-slate-200 bg-white">
+            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left">
+              <span class="text-sm font-semibold text-slate-900">How long is the free trial?</span>
+              <svg class="faq-chevron h-5 w-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5">
+              <p class="text-sm text-slate-600">vinQuality offers a 14-day free trial with full access to all features. No credit card required. Simply sign up and start managing your quality processes immediately.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-d2 rounded-xl border border-slate-200 bg-white">
+            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left">
+              <span class="text-sm font-semibold text-slate-900">Which compliance standards does vinQuality support?</span>
+              <svg class="faq-chevron h-5 w-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5">
+              <p class="text-sm text-slate-600">vinQuality is designed for ISO 9001, AS9100, 21 CFR Part 11, and IATF 16949 compliance. Features like SHA-256 hash chain audit trails, e-signatures, and role-based access control are built in from day one.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-d3 rounded-xl border border-slate-200 bg-white">
+            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left">
+              <span class="text-sm font-semibold text-slate-900">Can I import existing quality data?</span>
+              <svg class="faq-chevron h-5 w-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5">
+              <p class="text-sm text-slate-600">Yes. vinQuality supports CSV import for NCMRs, deviations, CAPAs, and SCARs. Our team can also assist with data migration from legacy systems to ensure a smooth transition.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-d4 rounded-xl border border-slate-200 bg-white">
+            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left">
+              <span class="text-sm font-semibold text-slate-900">How does vinQuality integrate with vinFMEA?</span>
+              <svg class="faq-chevron h-5 w-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5">
+              <p class="text-sm text-slate-600">vinQuality and vinFMEA form a closed-loop system. Failure modes predicted in FMEA can be linked to real-world non-conformances captured in vinQuality, enabling continuous improvement and risk reduction.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-d5 rounded-xl border border-slate-200 bg-white">
+            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left">
+              <span class="text-sm font-semibold text-slate-900">What does the audit trail look like?</span>
+              <svg class="faq-chevron h-5 w-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5">
+              <p class="text-sm text-slate-600">Every action in vinQuality is logged with SHA-256 hash chain integrity. Each audit entry includes who, what, when, and a cryptographic hash linking it to the previous entry — making the trail tamper-evident and auditor-ready.</p>
+            </div>
+          </div>
+          <div class="reveal reveal-d6 rounded-xl border border-slate-200 bg-white">
+            <button class="faq-toggle w-full flex items-center justify-between p-5 text-left">
+              <span class="text-sm font-semibold text-slate-900">Is my data secure?</span>
+              <svg class="faq-chevron h-5 w-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-answer px-5 pb-5">
+              <p class="text-sm text-slate-600">Absolutely. vinQuality uses TLS encryption in transit, AES-256 encryption at rest, role-based access control, and session management. Your quality data is hosted on enterprise-grade cloud infrastructure with 99.9% uptime SLA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CTA ============ -->
-    <section class="py-20 sm:py-28 bg-gradient-to-br from-[#0D9488] to-[#0F766E]">
+    <section class="py-20 sm:py-28 bg-gradient-to-br from-[#0D9488] via-[#0F766E] to-[#134E4A] gradient-animate">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="reveal mx-auto max-w-3xl text-center">
           <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Modernize Your Quality Management?</h2>

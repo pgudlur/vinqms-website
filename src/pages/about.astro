@@ -5,150 +5,342 @@ import Footer from '../components/Footer.astro';
 ---
 
 <BaseLayout
-  title="About — vinReliability"
-  description="vinReliability LLC builds engineering software for quality and reliability professionals."
-  keywords="vinReliability, about, quality engineering software, reliability software company"
+  title="About vinReliability — Our Story & Mission"
+  description="vinReliability LLC builds professional-grade quality and reliability engineering software. Founded by engineers, for engineers. Learn about our story, values, and mission."
+  keywords="vinReliability, about, quality engineering software, reliability software company, FMEA, QMS, statistical analysis"
   canonical="/about"
 >
   <Header />
 
   <main>
-    <!-- Hero -->
-    <section class="bg-gradient-to-b from-slate-50 to-white py-16 sm:py-24">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <div class="reveal">
-          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0F172A] to-[#1E293B]">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#0D9488] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-[#6366F1] rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div class="reveal mx-auto max-w-4xl text-center">
+          <span class="inline-flex items-center rounded-full border border-[#0D9488]/30 bg-[#0D9488]/10 px-4 py-1.5 text-sm font-medium text-[#5EEAD4]">
             About vinReliability
+          </span>
+          <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Engineering Excellence,<br />Built by Engineers.
           </h1>
-          <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">
-            Engineering software built for quality and reliability professionals.
+          <p class="mt-6 text-lg text-slate-300 sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            We build focused, professional-grade tools for quality and reliability engineers &mdash; because the people who keep products safe deserve software that actually works.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Company Story -->
-    <section class="py-16 sm:py-20 bg-white">
+    <!-- ============ STATS BAR ============ -->
+    <section class="relative py-12 sm:py-16 bg-white border-b border-slate-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div class="reveal reveal-d1 text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#0D9488]">3</div>
+            <div class="mt-1 text-sm font-medium text-slate-600">Products</div>
+          </div>
+          <div class="reveal reveal-d2 text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#0D9488]">60+</div>
+            <div class="mt-1 text-sm font-medium text-slate-600">Statistical Tools</div>
+          </div>
+          <div class="reveal reveal-d3 text-center">
+            <div class="text-3xl sm:text-4xl font-extrabold text-[#0D9488]">6</div>
+            <div class="mt-1 text-sm font-medium text-slate-600">Standards Supported</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUR STORY ============ -->
+    <section class="py-16 sm:py-24 bg-white">
       <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div class="reveal">
-          <h2 class="text-3xl font-bold text-slate-900">Our Story</h2>
-          <div class="mt-6 space-y-4 text-base text-slate-600 leading-relaxed">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Our Story</h2>
+          <div class="mt-8 space-y-6 text-base text-slate-600 leading-relaxed">
             <p>
-              vinReliability LLC builds engineering software that helps manufacturers design better products, catch quality issues faster, and make data-driven decisions. Our tools are used by quality engineers, reliability engineers, and data analysts worldwide.
+              vinReliability LLC was founded by reliability and quality engineers who spent years working inside regulated manufacturers &mdash; aerospace, automotive, medical device &mdash; and saw the same problem everywhere: the tools were either prohibitively expensive, painfully outdated, or forced teams into workflows that made no sense on the shop floor. We started building the software we wished we had.
             </p>
             <p>
-              We understand the challenges of managing quality in regulated industries. Our products are designed by engineers who have worked on the factory floor, led CAPA investigations, and built reliability test programs. That hands-on experience shapes every feature we build.
+              Our first product, vinReliability, brought professional statistical analysis &mdash; Weibull modeling, DOE, SPC, survival analysis &mdash; into a modern desktop application that engineers could actually afford. From there, we expanded into vinFMEA for AIAG-VDA compliant failure mode analysis, and vinQuality for cloud-based quality management covering NCMRs, CAPAs, Deviations, and SCARs.
             </p>
             <p>
-              From small machine shops tracking nonconformances to multinational manufacturers running enterprise-wide FMEA programs, our goal is the same: give every team access to professional-grade tools without the complexity and cost of legacy systems.
+              We are a small company and we intend to stay focused. Every feature we ship is something a working engineer asked for. We do not build bloated platforms with a thousand checkboxes nobody uses. We build sharp, reliable tools that solve real problems &mdash; and we price them so that a five-person quality team gets the same capability as a Fortune 500 department.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Our Products -->
-    <section class="py-16 sm:py-20 bg-slate-50">
+    <!-- ============ COMPANY TIMELINE ============ -->
+    <section class="py-16 sm:py-24 bg-slate-50">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Company Timeline</h2>
+          <p class="mt-3 text-lg text-slate-600">Key milestones in our journey.</p>
+        </div>
+
+        <div class="relative border-l-2 border-[#0D9488]/30 ml-4 sm:ml-8 space-y-10">
+          <!-- 2024: Founded -->
+          <div class="reveal reveal-d1 relative pl-8">
+            <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-[#0D9488] bg-white"></div>
+            <span class="inline-block rounded-full bg-[#0D9488]/10 px-3 py-0.5 text-xs font-semibold text-[#0D9488]">2024</span>
+            <h3 class="mt-2 text-lg font-bold text-slate-900">vinReliability LLC Founded</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Started with a vision to democratize reliability engineering software and make professional-grade tools accessible to teams of every size.
+            </p>
+          </div>
+
+          <!-- 2024: v1.0 -->
+          <div class="reveal reveal-d2 relative pl-8">
+            <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-[#0D9488] bg-white"></div>
+            <span class="inline-block rounded-full bg-[#0D9488]/10 px-3 py-0.5 text-xs font-semibold text-[#0D9488]">2024</span>
+            <h3 class="mt-2 text-lg font-bold text-slate-900">vinReliability v1.0</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Launched professional statistical analysis software with Weibull modeling, Design of Experiments, SPC, and over 60 engineering tools.
+            </p>
+          </div>
+
+          <!-- 2025: vinFMEA -->
+          <div class="reveal reveal-d3 relative pl-8">
+            <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-[#0D9488] bg-white"></div>
+            <span class="inline-block rounded-full bg-[#0D9488]/10 px-3 py-0.5 text-xs font-semibold text-[#0D9488]">2025</span>
+            <h3 class="mt-2 text-lg font-bold text-slate-900">vinFMEA Launched</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Released the AIAG-VDA compliant FMEA and Control Plan suite with Design FMEA, Process FMEA, FMEA-MSR, and integrated action tracking.
+            </p>
+          </div>
+
+          <!-- 2025: vinQuality Beta -->
+          <div class="reveal reveal-d4 relative pl-8">
+            <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-[#0D9488] bg-white"></div>
+            <span class="inline-block rounded-full bg-[#0D9488]/10 px-3 py-0.5 text-xs font-semibold text-[#0D9488]">2025</span>
+            <h3 class="mt-2 text-lg font-bold text-slate-900">vinQuality Beta</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Entered beta for our cloud-based Quality Management System covering NCMRs, CAPAs, Deviations, and SCARs with hash-chain audit trails.
+            </p>
+          </div>
+
+          <!-- 2026: vinQMS.com -->
+          <div class="reveal reveal-d5 relative pl-8">
+            <div class="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-[#0D9488] bg-white"></div>
+            <span class="inline-block rounded-full bg-[#0D9488]/10 px-3 py-0.5 text-xs font-semibold text-[#0D9488]">2026</span>
+            <h3 class="mt-2 text-lg font-bold text-slate-900">vinQMS.com Platform</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Unified platform bringing vinQuality, vinFMEA, and vinReliability together under one roof with shared authentication, cross-product workflows, and integrated pricing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUR VALUES ============ -->
+    <section class="py-16 sm:py-24 bg-slate-50">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="reveal text-center mb-12">
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Our Products</h2>
-          <p class="mt-3 text-lg text-slate-600">Three products, one mission: better quality and reliability engineering.</p>
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Our Values</h2>
+          <p class="mt-3 text-lg text-slate-600">The principles that drive everything we build.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- vinQuality -->
-          <div class="reveal reveal-d1 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Engineer-First Design -->
+          <div class="reveal reveal-d1 card-hover rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0D9488]/10">
               <svg class="h-6 w-6 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
               </svg>
             </div>
-            <h3 class="mt-4 text-xl font-bold text-slate-900">vinQuality</h3>
-            <p class="mt-1 text-sm font-medium text-[#0D9488]">Quality Management System</p>
-            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-              Cloud-based QMS for managing NCMRs, Deviations, CAPAs, and SCARs. Configurable workflows, audit trails, SLA tracking, and real-time dashboards keep your quality program on track.
+            <h3 class="mt-4 text-lg font-bold text-slate-900">Engineer-First Design</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              Built by engineers, for engineers. No bloated enterprise features &mdash; just the tools you actually need on the job.
             </p>
-            <a href="/quality" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[#0D9488] hover:text-[#0F766E] transition-colors">
-              Learn more
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-            </a>
           </div>
 
-          <!-- vinFMEA -->
-          <div class="reveal reveal-d2 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
-            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10">
-              <svg class="h-6 w-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <h3 class="mt-4 text-xl font-bold text-slate-900">vinFMEA</h3>
-            <p class="mt-1 text-sm font-medium text-amber-600">FMEA &amp; Control Plan Suite</p>
-            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-              Design FMEA, Process FMEA, and FMEA-MSR analysis with AIAG-VDA aligned worksheets. Integrated control plans, risk matrices, and action tracking in one tool.
-            </p>
-            <a href="/fmea" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[#0D9488] hover:text-[#0F766E] transition-colors">
-              Learn more
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-            </a>
-          </div>
-
-          <!-- vinReliability -->
-          <div class="reveal reveal-d3 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+          <!-- Compliance by Default -->
+          <div class="reveal reveal-d2 card-hover rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
             <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500/10">
               <svg class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
               </svg>
             </div>
-            <h3 class="mt-4 text-xl font-bold text-slate-900">vinReliability</h3>
-            <p class="mt-1 text-sm font-medium text-blue-600">Statistical Analysis</p>
-            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-              Desktop software for Weibull analysis, life data modeling, accelerated life testing, reliability prediction, and over 60 statistical tools for engineering decision-making.
+            <h3 class="mt-4 text-lg font-bold text-slate-900">Compliance by Default</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              ISO 9001, AS9100, 21 CFR Part 11, and IATF 16949 requirements are built in from day one &mdash; not bolted on as an afterthought.
             </p>
-            <a href="/reliability" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-[#0D9488] hover:text-[#0F766E] transition-colors">
-              Learn more
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+          </div>
+
+          <!-- Affordable & Modular -->
+          <div class="reveal reveal-d3 card-hover rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/10">
+              <svg class="h-6 w-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+              </svg>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-slate-900">Affordable &amp; Modular</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              Pay only for what you need. No shelfware, no lock-in. Scale from a single module to the full platform at your own pace.
+            </p>
+          </div>
+
+          <!-- Data-Driven Quality -->
+          <div class="reveal reveal-d4 card-hover rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500/10">
+              <svg class="h-6 w-6 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+              </svg>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-slate-900">Data-Driven Quality</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              Every decision backed by statistical rigor and real-time analytics. No guesswork &mdash; just data, trends, and actionable insight.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEAM SECTION ============ -->
+    <section class="py-16 sm:py-24 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Built by Engineers</h2>
+          <p class="mt-3 text-lg text-slate-600">Our team combines deep domain expertise with modern software engineering.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Quality Engineering -->
+          <div class="reveal reveal-d1 card-hover rounded-2xl border border-slate-200 bg-white p-8 shadow-sm text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#0D9488]/10">
+              <span class="text-xl font-bold text-[#0D9488]">QE</span>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-slate-900">Quality Engineering</h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              15+ years in aerospace and medical device QMS, leading NCMR/CAPA processes across regulated industries.
+            </p>
+          </div>
+
+          <!-- Software Architecture -->
+          <div class="reveal reveal-d2 card-hover rounded-2xl border border-slate-200 bg-white p-8 shadow-sm text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/10">
+              <span class="text-xl font-bold text-blue-500">SA</span>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-slate-900">Software Architecture</h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Full-stack expertise in Next.js, FastAPI, and PostgreSQL. Deep experience building regulatory-compliant SaaS platforms.
+            </p>
+          </div>
+
+          <!-- Reliability Engineering -->
+          <div class="reveal reveal-d3 card-hover rounded-2xl border border-slate-200 bg-white p-8 shadow-sm text-center">
+            <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-indigo-500/10">
+              <span class="text-xl font-bold text-indigo-500">RE</span>
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-slate-900">Reliability Engineering</h3>
+            <p class="mt-3 text-sm text-slate-600 leading-relaxed">
+              Statistical analysis specialist. Weibull modeling, DOE, SPC, and survival analysis across automotive and defense.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INDUSTRIES SERVED ============ -->
+    <section class="relative overflow-hidden py-16 sm:py-24 bg-[#0F172A]">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[#0D9488] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-[#6366F1] rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white">Industries We Serve</h2>
+          <p class="mt-3 text-lg text-slate-400">Our tools are built for the demands of regulated manufacturing.</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+          <!-- Aerospace -->
+          <div class="reveal reveal-d1 text-center">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#0D9488]/20">
+              <svg class="h-7 w-7 text-[#5EEAD4]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+            </div>
+            <p class="mt-3 text-sm font-medium text-slate-300">Aerospace</p>
+          </div>
+
+          <!-- Automotive -->
+          <div class="reveal reveal-d2 text-center">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-blue-500/20">
+              <svg class="h-7 w-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H18.75m-2.25 0h-6m0 0V8.25m0 0h6.375c.621 0 1.125.504 1.125 1.125v4.5M10.5 8.25L9 5.25H5.625m4.875 3H3.375A1.125 1.125 0 012.25 7.125V5.25" />
+              </svg>
+            </div>
+            <p class="mt-3 text-sm font-medium text-slate-300">Automotive</p>
+          </div>
+
+          <!-- Medical Devices -->
+          <div class="reveal reveal-d3 text-center">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-rose-500/20">
+              <svg class="h-7 w-7 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+              </svg>
+            </div>
+            <p class="mt-3 text-sm font-medium text-slate-300">Medical Devices</p>
+          </div>
+
+          <!-- Electronics -->
+          <div class="reveal reveal-d4 text-center">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-amber-500/20">
+              <svg class="h-7 w-7 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
+              </svg>
+            </div>
+            <p class="mt-3 text-sm font-medium text-slate-300">Electronics</p>
+          </div>
+
+          <!-- Energy -->
+          <div class="reveal reveal-d5 text-center">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-yellow-500/20">
+              <svg class="h-7 w-7 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+              </svg>
+            </div>
+            <p class="mt-3 text-sm font-medium text-slate-300">Energy</p>
+          </div>
+
+          <!-- General Manufacturing -->
+          <div class="reveal reveal-d6 text-center">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-indigo-500/20">
+              <svg class="h-7 w-7 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3H21m-3.75 3H21" />
+              </svg>
+            </div>
+            <p class="mt-3 text-sm font-medium text-slate-300">General Manufacturing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-20 sm:py-28 bg-gradient-to-br from-[#0D9488] via-[#0F766E] to-[#134E4A] gradient-animate">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-3xl text-center">
+          <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Transform Your Quality Process?</h2>
+          <p class="mt-4 text-lg text-white/80">Join manufacturers worldwide who trust vinReliability for quality and reliability engineering.</p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://frontend-production-bec1.up.railway.app/register"
+              class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-[#0D9488] shadow-lg hover:bg-slate-50 transition-colors w-full sm:w-auto"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto"
+            >
+              Contact Sales
             </a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mission -->
-    <section class="py-16 sm:py-20 bg-white">
-      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-        <div class="reveal">
-          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Our Mission</h2>
-          <blockquote class="mt-8 text-xl sm:text-2xl font-medium text-slate-700 leading-relaxed">
-            Our mission is to make professional quality and reliability engineering tools accessible and affordable for teams of every size.
-          </blockquote>
-          <div class="mt-8 flex items-center justify-center gap-2">
-            <div class="h-1 w-16 rounded-full bg-[#0D9488]"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Info -->
-    <section class="py-16 sm:py-20 bg-slate-50">
-      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
-        <div class="reveal">
-          <h2 class="text-3xl font-bold text-slate-900">Get in Touch</h2>
-          <p class="mt-4 text-base text-slate-600">
-            Have questions about our products? We would love to hear from you.
-          </p>
-          <div class="mt-8 space-y-3">
-            <p class="text-base text-slate-700">
-              <span class="font-semibold">Email:</span>
-              <a href="mailto:support@vinreliability.net" class="text-[#0D9488] hover:text-[#0F766E] transition-colors">support@vinreliability.net</a>
-            </p>
-            <p class="text-base text-slate-700">
-              <span class="font-semibold">Website:</span>
-              <a href="https://vinqms.com" class="text-[#0D9488] hover:text-[#0F766E] transition-colors">vinqms.com</a>
-            </p>
-          </div>
-          <a href="/contact" class="mt-8 inline-flex items-center justify-center rounded-lg bg-[#0D9488] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors">
-            Contact Us
-          </a>
         </div>
       </div>
     </section>

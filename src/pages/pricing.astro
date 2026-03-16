@@ -27,6 +27,37 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <!-- Compliance Badges -->
+    <section class="bg-white py-8 border-b border-slate-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <span class="text-sm font-medium text-slate-500 uppercase tracking-wide">Designed for compliance with:</span>
+          <div class="flex flex-wrap items-center justify-center gap-4">
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 border border-slate-200 px-3.5 py-1.5 text-xs font-semibold text-slate-700">
+              <svg class="h-4 w-4 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              ISO 9001
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 border border-slate-200 px-3.5 py-1.5 text-xs font-semibold text-slate-700">
+              <svg class="h-4 w-4 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              AS9100
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 border border-slate-200 px-3.5 py-1.5 text-xs font-semibold text-slate-700">
+              <svg class="h-4 w-4 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              21 CFR Part 11
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 border border-slate-200 px-3.5 py-1.5 text-xs font-semibold text-slate-700">
+              <svg class="h-4 w-4 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              IATF 16949
+            </span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 border border-slate-200 px-3.5 py-1.5 text-xs font-semibold text-slate-700">
+              <svg class="h-4 w-4 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+              AIAG-VDA
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- vinQuality Pricing -->
     <section class="py-16 sm:py-20 bg-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -44,7 +75,7 @@ import Footer from '../components/Footer.astro';
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           <!-- NCMR -->
-          <div class="reveal reveal-d1 relative rounded-2xl border-2 border-[#0D9488] bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="reveal reveal-d1 card-hover relative rounded-2xl border-2 border-[#0D9488] bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
             <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#0D9488] px-3 py-1 text-xs font-semibold text-white">Most Popular</span>
             <h3 class="text-lg font-semibold text-slate-900">NCMR</h3>
             <p class="text-sm text-slate-500">Non-Conformance Reports</p>
@@ -77,7 +108,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Deviations -->
-          <div class="reveal reveal-d2 relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="reveal reveal-d2 card-hover relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold text-slate-900">Deviations</h3>
             <p class="text-sm text-slate-500">Deviation Management</p>
             <div class="mt-4 flex items-baseline gap-1">
@@ -109,7 +140,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- CAPA -->
-          <div class="reveal reveal-d3 relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="reveal reveal-d3 card-hover relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold text-slate-900">CAPA</h3>
             <p class="text-sm text-slate-500">Corrective &amp; Preventive Actions</p>
             <div class="mt-4 flex items-baseline gap-1">
@@ -141,7 +172,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- SCAR -->
-          <div class="reveal reveal-d4 relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="reveal reveal-d4 card-hover relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold text-slate-900">SCAR</h3>
             <p class="text-sm text-slate-500">Supplier Corrective Actions</p>
             <div class="mt-4 flex items-baseline gap-1">
@@ -173,7 +204,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Analytics -->
-          <div class="reveal reveal-d5 relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="reveal reveal-d5 card-hover relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold text-slate-900">Analytics</h3>
             <p class="text-sm text-slate-500">Dashboards &amp; Reporting</p>
             <div class="mt-4 flex items-baseline gap-1">
@@ -205,7 +236,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Calibration -->
-          <div class="reveal reveal-d6 relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="reveal reveal-d6 card-hover relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold text-slate-900">Calibration</h3>
             <p class="text-sm text-slate-500">Equipment Calibration Management</p>
             <div class="mt-4 flex items-baseline gap-1">
@@ -261,7 +292,7 @@ import Footer from '../components/Footer.astro';
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
           <!-- Professional -->
-          <div class="reveal reveal-d1 relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="reveal reveal-d1 card-hover relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold text-slate-900">Professional</h3>
             <p class="text-sm text-slate-500">For individual engineers</p>
             <div class="mt-4 flex items-baseline gap-1">
@@ -305,7 +336,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Team (Highlighted) with interactive slider -->
-          <div class="reveal reveal-d2 relative rounded-2xl border-2 border-[#0D9488] bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="reveal reveal-d2 card-hover relative rounded-2xl border-2 border-[#0D9488] bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
             <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#0D9488] px-3 py-1 text-xs font-semibold text-white">Most Popular</span>
             <h3 class="text-lg font-semibold text-slate-900">Team</h3>
             <p class="text-sm text-slate-500">Floating seats (shared pool)</p>
@@ -398,7 +429,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Enterprise -->
-          <div class="reveal reveal-d3 relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="reveal reveal-d3 card-hover relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold text-slate-900">Enterprise</h3>
             <p class="text-sm text-slate-500">Unlimited seats, dedicated support</p>
             <div class="mt-4 flex items-baseline gap-1">
@@ -453,7 +484,7 @@ import Footer from '../components/Footer.astro';
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
           <!-- Individual -->
-          <div class="reveal reveal-d1 relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="reveal reveal-d1 card-hover relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold text-slate-900">Individual</h3>
             <p class="text-sm text-slate-500">For individual professionals</p>
             <div class="mt-4 flex items-baseline gap-1">
@@ -485,7 +516,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Team (Highlighted) with interactive slider -->
-          <div class="reveal reveal-d2 relative rounded-2xl border-2 border-[#0D9488] bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
+          <div class="reveal reveal-d2 card-hover relative rounded-2xl border-2 border-[#0D9488] bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
             <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#0D9488] px-3 py-1 text-xs font-semibold text-white">Most Popular</span>
             <h3 class="text-lg font-semibold text-slate-900">Team</h3>
             <p class="text-sm text-slate-500">Floating seats (shared pool)</p>
@@ -571,7 +602,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Enterprise -->
-          <div class="reveal reveal-d3 relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="reveal reveal-d3 card-hover relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
             <h3 class="text-lg font-semibold text-slate-900">Enterprise</h3>
             <p class="text-sm text-slate-500">Unlimited seats, dedicated support</p>
             <div class="mt-4 flex items-baseline gap-1">
@@ -752,7 +783,198 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- How We Compare -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">How We Compare</h2>
+          <p class="mt-3 text-lg text-slate-600">See why teams choose vinQuality over legacy enterprise QMS platforms.</p>
+        </div>
+
+        <div class="reveal overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+          <table class="w-full text-left">
+            <thead>
+              <tr class="bg-slate-50">
+                <th class="px-6 py-4 text-sm font-semibold text-slate-500 w-1/3"></th>
+                <th class="px-6 py-4 text-sm font-bold text-[#0D9488] text-center w-1/3">
+                  <span class="inline-flex items-center gap-1.5">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    vinQuality
+                  </span>
+                </th>
+                <th class="px-6 py-4 text-sm font-semibold text-slate-500 text-center w-1/3">Traditional Enterprise QMS</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr>
+                <td class="px-6 py-4 text-sm font-medium text-slate-700">Deployment Time</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0D9488]">
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    Minutes
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-slate-500">3-6 months</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-6 py-4 text-sm font-medium text-slate-700">Starting Price</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0D9488]">
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    $29/month
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-slate-500">$50,000+/year</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm font-medium text-slate-700">Compliance Features</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0D9488]">
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    Included
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-slate-500">Add-on modules</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="px-6 py-4 text-sm font-medium text-slate-700">Implementation Cost</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0D9488]">
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    $0
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-slate-500">$100,000+</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-sm font-medium text-slate-700">Customization</td>
+                <td class="px-6 py-4 text-center">
+                  <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0D9488]">
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    Modular, self-service
+                  </span>
+                </td>
+                <td class="px-6 py-4 text-center text-sm text-slate-500">Consultant required</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing FAQ -->
+    <section class="py-16 sm:py-20 bg-slate-50">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Pricing FAQ</h2>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="reveal">
+            <label class="faq-toggle block cursor-pointer rounded-xl border border-slate-200 bg-white overflow-hidden">
+              <input type="checkbox" class="sr-only" />
+              <div class="faq-question flex items-center justify-between p-5 text-left text-base font-semibold text-slate-900 hover:text-[#0D9488] transition-colors">
+                How long is the free trial?
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+              <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                  vinQuality offers a 14-day free trial with full access to all features. No credit card required.
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="reveal">
+            <label class="faq-toggle block cursor-pointer rounded-xl border border-slate-200 bg-white overflow-hidden">
+              <input type="checkbox" class="sr-only" />
+              <div class="faq-question flex items-center justify-between p-5 text-left text-base font-semibold text-slate-900 hover:text-[#0D9488] transition-colors">
+                Can I change plans later?
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+              <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                  Yes, upgrade or downgrade anytime. Changes take effect at the start of your next billing cycle.
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="reveal">
+            <label class="faq-toggle block cursor-pointer rounded-xl border border-slate-200 bg-white overflow-hidden">
+              <input type="checkbox" class="sr-only" />
+              <div class="faq-question flex items-center justify-between p-5 text-left text-base font-semibold text-slate-900 hover:text-[#0D9488] transition-colors">
+                Is there an annual discount?
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+              <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                  Contact our sales team for annual pricing. We offer significant discounts for annual commitments.
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="reveal">
+            <label class="faq-toggle block cursor-pointer rounded-xl border border-slate-200 bg-white overflow-hidden">
+              <input type="checkbox" class="sr-only" />
+              <div class="faq-question flex items-center justify-between p-5 text-left text-base font-semibold text-slate-900 hover:text-[#0D9488] transition-colors">
+                How do multi-module discounts work?
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+              <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                  Add 2 modules and save 10%, 3 modules for 15% off, or 4+ modules for 20% off. Discounts apply automatically.
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="reveal">
+            <label class="faq-toggle block cursor-pointer rounded-xl border border-slate-200 bg-white overflow-hidden">
+              <input type="checkbox" class="sr-only" />
+              <div class="faq-question flex items-center justify-between p-5 text-left text-base font-semibold text-slate-900 hover:text-[#0D9488] transition-colors">
+                What payment methods do you accept?
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+              <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                  We accept all major credit cards and can arrange invoicing for Enterprise plans.
+                </div>
+              </div>
+            </label>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="reveal">
+            <label class="faq-toggle block cursor-pointer rounded-xl border border-slate-200 bg-white overflow-hidden">
+              <input type="checkbox" class="sr-only" />
+              <div class="faq-question flex items-center justify-between p-5 text-left text-base font-semibold text-slate-900 hover:text-[#0D9488] transition-colors">
+                Can I cancel anytime?
+                <svg class="faq-chevron h-5 w-5 shrink-0 text-slate-400 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </div>
+              <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed">
+                  Yes, cancel anytime with no penalties. Your data remains accessible for 30 days after cancellation.
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .faq-toggle input:checked ~ .faq-answer { max-height: 10rem; }
+      .faq-toggle input:checked ~ .faq-question .faq-chevron { transform: rotate(180deg); }
+    </style>
+
+    <!-- FAQ Section (General) -->
     <section class="py-16 sm:py-20 bg-white">
       <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div class="reveal text-center mb-12">
