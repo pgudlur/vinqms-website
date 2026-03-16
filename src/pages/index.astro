@@ -110,6 +110,58 @@ const jsonLd = JSON.stringify({
             </div>
             <h3 class="mt-4 text-xl font-bold text-slate-900">vinQuality</h3>
             <p class="mt-1 text-sm font-medium text-[#0D9488]">Cloud-Based Quality Management System</p>
+            <!-- Mini app preview -->
+            <div class="mt-4 rounded-lg overflow-hidden border border-slate-200 bg-slate-50">
+              <svg viewBox="0 0 320 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                <rect width="320" height="140" fill="#F8FAFC"/>
+                <!-- Mini sidebar -->
+                <rect width="60" height="140" fill="#0F172A"/>
+                <rect x="8" y="8" width="44" height="6" rx="3" fill="#0D9488" fill-opacity="0.4"/>
+                <rect x="8" y="22" width="44" height="5" rx="2.5" fill="#0D9488" fill-opacity="0.2"/>
+                <rect x="8" y="34" width="44" height="5" rx="2.5" fill="#475569" fill-opacity="0.3"/>
+                <rect x="8" y="46" width="44" height="5" rx="2.5" fill="#475569" fill-opacity="0.3"/>
+                <rect x="8" y="58" width="44" height="5" rx="2.5" fill="#475569" fill-opacity="0.3"/>
+                <!-- Stat cards -->
+                <rect x="70" y="8" width="56" height="32" rx="4" fill="white" stroke="#E2E8F0" stroke-width="0.5"/>
+                <text x="78" y="20" font-family="system-ui" font-size="5" fill="#64748B">Open NCMRs</text>
+                <text x="78" y="32" font-family="system-ui" font-size="10" font-weight="700" fill="#0F172A">24</text>
+                <rect x="132" y="8" width="56" height="32" rx="4" fill="white" stroke="#E2E8F0" stroke-width="0.5"/>
+                <text x="140" y="20" font-family="system-ui" font-size="5" fill="#64748B">Active CAPAs</text>
+                <text x="140" y="32" font-family="system-ui" font-size="10" font-weight="700" fill="#0F172A">12</text>
+                <rect x="194" y="8" width="56" height="32" rx="4" fill="white" stroke="#E2E8F0" stroke-width="0.5"/>
+                <text x="202" y="20" font-family="system-ui" font-size="5" fill="#64748B">SLA Comp.</text>
+                <text x="202" y="32" font-family="system-ui" font-size="10" font-weight="700" fill="#0D9488">94%</text>
+                <rect x="256" y="8" width="56" height="32" rx="4" fill="white" stroke="#E2E8F0" stroke-width="0.5"/>
+                <text x="264" y="20" font-family="system-ui" font-size="5" fill="#64748B">Pending</text>
+                <text x="264" y="32" font-family="system-ui" font-size="10" font-weight="700" fill="#F59E0B">7</text>
+                <!-- Table rows -->
+                <rect x="70" y="48" width="242" height="84" rx="4" fill="white" stroke="#E2E8F0" stroke-width="0.5"/>
+                <rect x="70" y="48" width="242" height="14" rx="0" fill="#F8FAFC"/>
+                <text x="78" y="58" font-family="system-ui" font-size="5" font-weight="600" fill="#64748B">NCMR #</text>
+                <text x="140" y="58" font-family="system-ui" font-size="5" font-weight="600" fill="#64748B">TITLE</text>
+                <text x="240" y="58" font-family="system-ui" font-size="5" font-weight="600" fill="#64748B">STATUS</text>
+                <line x1="70" y1="62" x2="312" y2="62" stroke="#F1F5F9" stroke-width="0.5"/>
+                <text x="78" y="74" font-family="system-ui" font-size="5" fill="#0D9488">NCMR-2026-00142</text>
+                <text x="140" y="74" font-family="system-ui" font-size="5" fill="#334155">Dimensional out-of-spec</text>
+                <rect x="240" y="68" width="30" height="10" rx="5" fill="#FEF3C7"/>
+                <text x="245" y="76" font-family="system-ui" font-size="4" font-weight="600" fill="#D97706">Review</text>
+                <line x1="70" y1="80" x2="312" y2="80" stroke="#F1F5F9" stroke-width="0.5"/>
+                <text x="78" y="92" font-family="system-ui" font-size="5" fill="#0D9488">NCMR-2026-00141</text>
+                <text x="140" y="92" font-family="system-ui" font-size="5" fill="#334155">Surface finish non-conf.</text>
+                <rect x="240" y="86" width="30" height="10" rx="5" fill="#DBEAFE"/>
+                <text x="246" y="94" font-family="system-ui" font-size="4" font-weight="600" fill="#2563EB">CAPA</text>
+                <line x1="70" y1="98" x2="312" y2="98" stroke="#F1F5F9" stroke-width="0.5"/>
+                <text x="78" y="110" font-family="system-ui" font-size="5" fill="#0D9488">NCMR-2026-00140</text>
+                <text x="140" y="110" font-family="system-ui" font-size="5" fill="#334155">Material cert mismatch</text>
+                <rect x="240" y="104" width="30" height="10" rx="5" fill="#D1FAE5"/>
+                <text x="244" y="112" font-family="system-ui" font-size="4" font-weight="600" fill="#059669">Closed</text>
+                <line x1="70" y1="116" x2="312" y2="116" stroke="#F1F5F9" stroke-width="0.5"/>
+                <text x="78" y="128" font-family="system-ui" font-size="5" fill="#0D9488">NCMR-2026-00139</text>
+                <text x="140" y="128" font-family="system-ui" font-size="5" fill="#334155">Weld porosity on A-12</text>
+                <rect x="240" y="122" width="30" height="10" rx="5" fill="#FEF3C7"/>
+                <text x="248" y="130" font-family="system-ui" font-size="4" font-weight="600" fill="#D97706">Open</text>
+              </svg>
+            </div>
             <ul class="mt-6 space-y-3">
               <li class="flex items-start gap-2 text-sm text-slate-600">
                 <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -144,6 +196,103 @@ const jsonLd = JSON.stringify({
             </div>
             <h3 class="mt-4 text-xl font-bold text-slate-900">vinFMEA</h3>
             <p class="mt-1 text-sm font-medium text-[#2563EB]">FMEA &amp; Control Plan Suite</p>
+            <!-- Mini app preview -->
+            <div class="mt-4 rounded-lg overflow-hidden border border-slate-200 bg-slate-50">
+              <svg viewBox="0 0 320 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                <rect width="320" height="140" fill="#F8FAFC"/>
+                <!-- Toolbar -->
+                <rect width="320" height="22" fill="#1E293B"/>
+                <text x="8" y="14" font-family="system-ui" font-size="6" font-weight="600" fill="white">vinFMEA Pro</text>
+                <!-- Tabs -->
+                <rect x="80" y="4" width="36" height="14" rx="3" fill="#334155"/>
+                <text x="86" y="14" font-family="system-ui" font-size="5" fill="#94A3B8">SFMEA</text>
+                <rect x="120" y="4" width="38" height="14" rx="3" fill="#334155"/>
+                <text x="125" y="14" font-family="system-ui" font-size="5" fill="#94A3B8">DFMEA</text>
+                <rect x="162" y="4" width="38" height="14" rx="3" fill="#2563EB"/>
+                <text x="168" y="14" font-family="system-ui" font-size="5" font-weight="600" fill="white">PFMEA</text>
+                <rect x="204" y="4" width="52" height="14" rx="3" fill="#334155"/>
+                <text x="208" y="14" font-family="system-ui" font-size="5" fill="#94A3B8">Control Plan</text>
+                <!-- Spreadsheet header -->
+                <rect x="0" y="22" width="320" height="14" fill="#EFF6FF"/>
+                <text x="6" y="32" font-family="system-ui" font-size="4.5" font-weight="600" fill="#1E40AF">Step</text>
+                <text x="26" y="32" font-family="system-ui" font-size="4.5" font-weight="600" fill="#1E40AF">Process</text>
+                <text x="80" y="32" font-family="system-ui" font-size="4.5" font-weight="600" fill="#1E40AF">Failure Mode</text>
+                <text x="150" y="32" font-family="system-ui" font-size="4.5" font-weight="600" fill="#1E40AF">S</text>
+                <text x="164" y="32" font-family="system-ui" font-size="4.5" font-weight="600" fill="#1E40AF">O</text>
+                <text x="178" y="32" font-family="system-ui" font-size="4.5" font-weight="600" fill="#1E40AF">D</text>
+                <text x="192" y="32" font-family="system-ui" font-size="4.5" font-weight="600" fill="#1E40AF">AP</text>
+                <text x="212" y="32" font-family="system-ui" font-size="4.5" font-weight="600" fill="#1E40AF">Action Item</text>
+                <text x="280" y="32" font-family="system-ui" font-size="4.5" font-weight="600" fill="#1E40AF">Status</text>
+                <!-- Data rows -->
+                <rect x="0" y="36" width="320" height="13" fill="white"/>
+                <text x="6" y="45" font-family="system-ui" font-size="4.5" fill="#334155">1</text>
+                <text x="26" y="45" font-family="system-ui" font-size="4.5" fill="#334155">CNC Machining</text>
+                <text x="80" y="45" font-family="system-ui" font-size="4.5" fill="#334155">Bore undersize</text>
+                <text x="151" y="45" font-family="system-ui" font-size="4.5" fill="#334155">7</text>
+                <text x="165" y="45" font-family="system-ui" font-size="4.5" fill="#334155">4</text>
+                <text x="179" y="45" font-family="system-ui" font-size="4.5" fill="#334155">3</text>
+                <rect x="190" y="39" width="14" height="9" rx="4" fill="#FEF3C7"/>
+                <text x="194" y="46" font-family="system-ui" font-size="4" font-weight="600" fill="#D97706">M</text>
+                <text x="212" y="45" font-family="system-ui" font-size="4.5" fill="#334155">Add in-process gauge</text>
+                <rect x="278" y="39" width="30" height="9" rx="4" fill="#D1FAE5"/>
+                <text x="282" y="46" font-family="system-ui" font-size="3.5" font-weight="600" fill="#059669">Complete</text>
+                <rect x="0" y="49" width="320" height="13" fill="#F8FAFC"/>
+                <text x="6" y="58" font-family="system-ui" font-size="4.5" fill="#334155">2</text>
+                <text x="26" y="58" font-family="system-ui" font-size="4.5" fill="#334155">Surface Treatment</text>
+                <text x="80" y="58" font-family="system-ui" font-size="4.5" fill="#334155">Coating adhesion fail</text>
+                <text x="151" y="58" font-family="system-ui" font-size="4.5" fill="#334155">8</text>
+                <text x="165" y="58" font-family="system-ui" font-size="4.5" fill="#334155">3</text>
+                <text x="179" y="58" font-family="system-ui" font-size="4.5" fill="#334155">4</text>
+                <rect x="190" y="52" width="14" height="9" rx="4" fill="#FEE2E2"/>
+                <text x="195" y="59" font-family="system-ui" font-size="4" font-weight="600" fill="#DC2626">H</text>
+                <text x="212" y="58" font-family="system-ui" font-size="4.5" fill="#334155">Validate pretreatment</text>
+                <rect x="278" y="52" width="30" height="9" rx="4" fill="#FEF3C7"/>
+                <text x="282" y="59" font-family="system-ui" font-size="3.5" font-weight="600" fill="#D97706">In Progress</text>
+                <rect x="0" y="62" width="320" height="13" fill="white"/>
+                <text x="6" y="71" font-family="system-ui" font-size="4.5" fill="#334155">3</text>
+                <text x="26" y="71" font-family="system-ui" font-size="4.5" fill="#334155">Assembly</text>
+                <text x="80" y="71" font-family="system-ui" font-size="4.5" fill="#334155">Torque out-of-spec</text>
+                <text x="151" y="71" font-family="system-ui" font-size="4.5" fill="#334155">9</text>
+                <text x="165" y="71" font-family="system-ui" font-size="4.5" fill="#334155">2</text>
+                <text x="179" y="71" font-family="system-ui" font-size="4.5" fill="#334155">3</text>
+                <rect x="190" y="65" width="14" height="9" rx="4" fill="#FEF3C7"/>
+                <text x="194" y="72" font-family="system-ui" font-size="4" font-weight="600" fill="#D97706">M</text>
+                <text x="212" y="71" font-family="system-ui" font-size="4.5" fill="#334155">Calibrate torque wrench</text>
+                <rect x="278" y="65" width="30" height="9" rx="4" fill="#DBEAFE"/>
+                <text x="284" y="72" font-family="system-ui" font-size="3.5" font-weight="600" fill="#2563EB">Planned</text>
+                <rect x="0" y="75" width="320" height="13" fill="#F8FAFC"/>
+                <text x="6" y="84" font-family="system-ui" font-size="4.5" fill="#334155">4</text>
+                <text x="26" y="84" font-family="system-ui" font-size="4.5" fill="#334155">Welding</text>
+                <text x="80" y="84" font-family="system-ui" font-size="4.5" fill="#334155">Weld porosity</text>
+                <text x="151" y="84" font-family="system-ui" font-size="4.5" fill="#334155">8</text>
+                <text x="165" y="84" font-family="system-ui" font-size="4.5" fill="#334155">5</text>
+                <text x="179" y="84" font-family="system-ui" font-size="4.5" fill="#334155">4</text>
+                <rect x="190" y="78" width="14" height="9" rx="4" fill="#FEE2E2"/>
+                <text x="195" y="85" font-family="system-ui" font-size="4" font-weight="600" fill="#DC2626">H</text>
+                <text x="212" y="84" font-family="system-ui" font-size="4.5" fill="#334155">Optimize weld params</text>
+                <rect x="278" y="78" width="30" height="9" rx="4" fill="#FEF3C7"/>
+                <text x="282" y="85" font-family="system-ui" font-size="3.5" font-weight="600" fill="#D97706">In Progress</text>
+                <!-- Risk matrix mini -->
+                <rect x="0" y="92" width="320" height="48" fill="white"/>
+                <text x="6" y="104" font-family="system-ui" font-size="5" font-weight="600" fill="#1E293B">Risk Heatmap</text>
+                <!-- 5x5 grid -->
+                <rect x="60" y="96" width="12" height="9" fill="#D1FAE5"/><rect x="74" y="96" width="12" height="9" fill="#D1FAE5"/><rect x="88" y="96" width="12" height="9" fill="#FEF3C7"/><rect x="102" y="96" width="12" height="9" fill="#FEF3C7"/><rect x="116" y="96" width="12" height="9" fill="#FEE2E2"/>
+                <rect x="60" y="107" width="12" height="9" fill="#D1FAE5"/><rect x="74" y="107" width="12" height="9" fill="#FEF3C7"/><rect x="88" y="107" width="12" height="9" fill="#FEF3C7"/><rect x="102" y="107" width="12" height="9" fill="#FEE2E2"/><rect x="116" y="107" width="12" height="9" fill="#FEE2E2"/>
+                <rect x="60" y="118" width="12" height="9" fill="#FEF3C7"/><rect x="74" y="118" width="12" height="9" fill="#FEF3C7"/><rect x="88" y="118" width="12" height="9" fill="#FEE2E2"/><rect x="102" y="118" width="12" height="9" fill="#FEE2E2"/><rect x="116" y="118" width="12" height="9" fill="#FEE2E2"/>
+                <!-- Dots on heatmap -->
+                <circle cx="96" cy="101" r="2.5" fill="#DC2626" fill-opacity="0.8"/>
+                <circle cx="82" cy="112" r="2.5" fill="#D97706" fill-opacity="0.8"/>
+                <circle cx="68" cy="123" r="2.5" fill="#059669" fill-opacity="0.8"/>
+                <circle cx="110" cy="112" r="2.5" fill="#DC2626" fill-opacity="0.8"/>
+                <!-- Legend -->
+                <rect x="150" y="100" width="8" height="6" rx="1" fill="#D1FAE5"/>
+                <text x="162" y="106" font-family="system-ui" font-size="4" fill="#64748B">Low</text>
+                <rect x="185" y="100" width="8" height="6" rx="1" fill="#FEF3C7"/>
+                <text x="197" y="106" font-family="system-ui" font-size="4" fill="#64748B">Medium</text>
+                <rect x="225" y="100" width="8" height="6" rx="1" fill="#FEE2E2"/>
+                <text x="237" y="106" font-family="system-ui" font-size="4" fill="#64748B">High</text>
+              </svg>
+            </div>
             <ul class="mt-6 space-y-3">
               <li class="flex items-start gap-2 text-sm text-slate-600">
                 <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -178,6 +327,81 @@ const jsonLd = JSON.stringify({
             </div>
             <h3 class="mt-4 text-xl font-bold text-slate-900">vinReliability</h3>
             <p class="mt-1 text-sm font-medium text-[#6366F1]">Statistical Analysis Software</p>
+            <!-- Mini app preview -->
+            <div class="mt-4 rounded-lg overflow-hidden border border-slate-200 bg-slate-50">
+              <svg viewBox="0 0 320 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                <rect width="320" height="140" fill="#0F172A"/>
+                <!-- Toolbar -->
+                <rect width="320" height="20" fill="#1E293B"/>
+                <text x="8" y="13" font-family="system-ui" font-size="6" font-weight="600" fill="white">vinReliability</text>
+                <rect x="80" y="5" width="40" height="11" rx="3" fill="#6366F1"/>
+                <text x="86" y="13" font-family="system-ui" font-size="4.5" font-weight="600" fill="white">Weibull</text>
+                <rect x="124" y="5" width="28" height="11" rx="3" fill="#334155"/>
+                <text x="129" y="13" font-family="system-ui" font-size="4.5" fill="#94A3B8">SPC</text>
+                <rect x="156" y="5" width="28" height="11" rx="3" fill="#334155"/>
+                <text x="161" y="13" font-family="system-ui" font-size="4.5" fill="#94A3B8">DOE</text>
+                <rect x="188" y="5" width="48" height="11" rx="3" fill="#334155"/>
+                <text x="193" y="13" font-family="system-ui" font-size="4.5" fill="#94A3B8">Regression</text>
+                <!-- Left panel: Weibull plot -->
+                <rect x="8" y="26" width="150" height="106" rx="6" fill="#1E293B" stroke="#334155" stroke-width="0.5"/>
+                <text x="16" y="38" font-family="system-ui" font-size="5" font-weight="600" fill="white">Weibull Probability Plot</text>
+                <!-- Grid lines -->
+                <line x1="28" y1="46" x2="148" y2="46" stroke="#334155" stroke-width="0.3"/>
+                <line x1="28" y1="62" x2="148" y2="62" stroke="#334155" stroke-width="0.3"/>
+                <line x1="28" y1="78" x2="148" y2="78" stroke="#334155" stroke-width="0.3"/>
+                <line x1="28" y1="94" x2="148" y2="94" stroke="#334155" stroke-width="0.3"/>
+                <line x1="28" y1="110" x2="148" y2="110" stroke="#334155" stroke-width="0.3"/>
+                <!-- Y axis labels -->
+                <text x="14" y="48" font-family="system-ui" font-size="3.5" fill="#64748B">99%</text>
+                <text x="14" y="64" font-family="system-ui" font-size="3.5" fill="#64748B">90%</text>
+                <text x="14" y="80" font-family="system-ui" font-size="3.5" fill="#64748B">50%</text>
+                <text x="14" y="96" font-family="system-ui" font-size="3.5" fill="#64748B">10%</text>
+                <text x="18" y="112" font-family="system-ui" font-size="3.5" fill="#64748B">1%</text>
+                <!-- Data points -->
+                <circle cx="52" cy="106" r="1.5" fill="#818CF8"/>
+                <circle cx="62" cy="98" r="1.5" fill="#818CF8"/>
+                <circle cx="72" cy="90" r="1.5" fill="#818CF8"/>
+                <circle cx="82" cy="82" r="1.5" fill="#818CF8"/>
+                <circle cx="90" cy="75" r="1.5" fill="#818CF8"/>
+                <circle cx="98" cy="68" r="1.5" fill="#818CF8"/>
+                <circle cx="108" cy="60" r="1.5" fill="#818CF8"/>
+                <circle cx="120" cy="52" r="1.5" fill="#818CF8"/>
+                <circle cx="132" cy="47" r="1.5" fill="#818CF8"/>
+                <!-- Fit line -->
+                <line x1="40" y1="114" x2="142" y2="44" stroke="#6366F1" stroke-width="1.2"/>
+                <!-- Confidence bands -->
+                <line x1="40" y1="118" x2="142" y2="48" stroke="#6366F1" stroke-width="0.4" stroke-dasharray="2 1" opacity="0.4"/>
+                <line x1="40" y1="110" x2="142" y2="40" stroke="#6366F1" stroke-width="0.4" stroke-dasharray="2 1" opacity="0.4"/>
+                <!-- Stats -->
+                <text x="16" y="126" font-family="system-ui" font-size="4" fill="#94A3B8">β=2.47</text>
+                <text x="50" y="126" font-family="system-ui" font-size="4" fill="#94A3B8">η=4,250</text>
+                <text x="92" y="126" font-family="system-ui" font-size="4" fill="#94A3B8">R²=0.987</text>
+                <!-- Right panel: Histogram -->
+                <rect x="166" y="26" width="146" height="106" rx="6" fill="#1E293B" stroke="#334155" stroke-width="0.5"/>
+                <text x="174" y="38" font-family="system-ui" font-size="5" font-weight="600" fill="white">Process Capability</text>
+                <!-- Histogram bars -->
+                <rect x="186" y="100" width="10" height="14" rx="1" fill="#6366F1" fill-opacity="0.3"/>
+                <rect x="198" y="88" width="10" height="26" rx="1" fill="#6366F1" fill-opacity="0.4"/>
+                <rect x="210" y="72" width="10" height="42" rx="1" fill="#6366F1" fill-opacity="0.5"/>
+                <rect x="222" y="56" width="10" height="58" rx="1" fill="#6366F1" fill-opacity="0.7"/>
+                <rect x="234" y="48" width="10" height="66" rx="1" fill="#6366F1" fill-opacity="0.9"/>
+                <rect x="246" y="52" width="10" height="62" rx="1" fill="#6366F1" fill-opacity="0.8"/>
+                <rect x="258" y="64" width="10" height="50" rx="1" fill="#6366F1" fill-opacity="0.6"/>
+                <rect x="270" y="82" width="10" height="32" rx="1" fill="#6366F1" fill-opacity="0.4"/>
+                <rect x="282" y="96" width="10" height="18" rx="1" fill="#6366F1" fill-opacity="0.3"/>
+                <!-- Bell curve -->
+                <path d="M186 114 Q200 110 215 90 Q230 56 240 48 Q250 56 265 90 Q280 110 294 114" stroke="#A5F3FC" stroke-width="1" fill="none"/>
+                <!-- LSL/USL lines -->
+                <line x1="192" y1="44" x2="192" y2="114" stroke="#EF4444" stroke-width="0.7" stroke-dasharray="2 1"/>
+                <line x1="286" y1="44" x2="286" y2="114" stroke="#EF4444" stroke-width="0.7" stroke-dasharray="2 1"/>
+                <text x="184" y="42" font-family="system-ui" font-size="3.5" fill="#EF4444">LSL</text>
+                <text x="280" y="42" font-family="system-ui" font-size="3.5" fill="#EF4444">USL</text>
+                <!-- Stats -->
+                <text x="182" y="126" font-family="system-ui" font-size="4" fill="#94A3B8">Cp=1.85</text>
+                <text x="218" y="126" font-family="system-ui" font-size="4" fill="#94A3B8">Cpk=1.67</text>
+                <text x="258" y="126" font-family="system-ui" font-size="4" fill="#94A3B8">Ppk=1.62</text>
+              </svg>
+            </div>
             <ul class="mt-6 space-y-3">
               <li class="flex items-start gap-2 text-sm text-slate-600">
                 <svg class="mt-0.5 h-4 w-4 shrink-0 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -268,65 +492,92 @@ const jsonLd = JSON.stringify({
           <p class="mt-4 text-lg text-slate-400">Predict failures, detect issues, and continuously improve &mdash; all connected.</p>
         </div>
 
-        <!-- 3-Column Flow -->
-        <div class="reveal mt-16 grid grid-cols-1 gap-6 md:grid-cols-3 items-center">
-          <div class="rounded-2xl border border-[#2563EB]/30 bg-[#1E293B] p-8 text-center">
-            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#2563EB]/10">
-              <svg class="h-7 w-7 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
+        <!-- 3-Product Flow: card → arrow → card → arrow → card -->
+        <div class="reveal mt-16">
+          <!-- Desktop: 5-column layout -->
+          <div class="hidden md:grid md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center md:gap-4">
+            <div class="rounded-2xl border border-[#2563EB]/30 bg-[#1E293B] p-8 text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#2563EB]/10">
+                <svg class="h-7 w-7 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-white">vinFMEA</h3>
+              <p class="mt-1 text-sm font-medium text-[#60A5FA]">Predict</p>
+              <p class="mt-3 text-sm text-slate-400">Identify and prioritize potential failure modes before they occur.</p>
             </div>
-            <h3 class="mt-4 text-lg font-bold text-white">vinFMEA</h3>
-            <p class="mt-1 text-sm font-medium text-[#60A5FA]">Predict</p>
-            <p class="mt-3 text-sm text-slate-400">Identify and prioritize potential failure modes before they occur.</p>
-          </div>
 
-          <!-- Arrow (hidden on mobile) -->
-          <div class="hidden md:flex items-center justify-center -mx-6">
-            <div class="flex items-center w-full">
-              <div class="flex-1 h-0.5 bg-gradient-to-r from-[#2563EB] to-[#0D9488]"></div>
-              <svg class="h-5 w-5 text-[#0D9488] -ml-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+            <div class="flex items-center px-2">
+              <div class="w-12 h-0.5 bg-gradient-to-r from-[#2563EB] to-[#0D9488]"></div>
+              <svg class="h-5 w-5 text-[#0D9488] -ml-1 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+            </div>
+
+            <div class="rounded-2xl border border-[#0D9488]/30 bg-[#1E293B] p-8 text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#0D9488]/10">
+                <svg class="h-7 w-7 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-white">vinQuality</h3>
+              <p class="mt-1 text-sm font-medium text-[#5EEAD4]">Detect &amp; Resolve</p>
+              <p class="mt-3 text-sm text-slate-400">Capture non-conformances, manage CAPAs, and track corrective actions.</p>
+            </div>
+
+            <div class="flex items-center px-2">
+              <div class="w-12 h-0.5 bg-gradient-to-r from-[#0D9488] to-[#6366F1]"></div>
+              <svg class="h-5 w-5 text-[#6366F1] -ml-1 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+            </div>
+
+            <div class="rounded-2xl border border-[#6366F1]/30 bg-[#1E293B] p-8 text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#6366F1]/10">
+                <svg class="h-7 w-7 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-white">vinReliability</h3>
+              <p class="mt-1 text-sm font-medium text-[#A5B4FC]">Analyze</p>
+              <p class="mt-3 text-sm text-slate-400">Statistically analyze reliability data to drive continuous improvement.</p>
             </div>
           </div>
 
-          <!-- Mobile arrow -->
-          <div class="flex md:hidden justify-center">
-            <svg class="h-6 w-6 text-slate-500 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-          </div>
-
-          <div class="rounded-2xl border border-[#0D9488]/30 bg-[#1E293B] p-8 text-center">
-            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#0D9488]/10">
-              <svg class="h-7 w-7 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+          <!-- Mobile: vertical stack with arrows -->
+          <div class="grid grid-cols-1 gap-4 md:hidden">
+            <div class="rounded-2xl border border-[#2563EB]/30 bg-[#1E293B] p-8 text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#2563EB]/10">
+                <svg class="h-7 w-7 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-white">vinFMEA</h3>
+              <p class="mt-1 text-sm font-medium text-[#60A5FA]">Predict</p>
+              <p class="mt-3 text-sm text-slate-400">Identify and prioritize potential failure modes before they occur.</p>
             </div>
-            <h3 class="mt-4 text-lg font-bold text-white">vinQuality</h3>
-            <p class="mt-1 text-sm font-medium text-[#5EEAD4]">Detect &amp; Resolve</p>
-            <p class="mt-3 text-sm text-slate-400">Capture non-conformances, manage CAPAs, and track corrective actions.</p>
-          </div>
-
-          <!-- Arrow (hidden on mobile) -->
-          <div class="hidden md:flex items-center justify-center -mx-6">
-            <div class="flex items-center w-full">
-              <div class="flex-1 h-0.5 bg-gradient-to-r from-[#0D9488] to-[#6366F1]"></div>
-              <svg class="h-5 w-5 text-[#6366F1] -ml-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+            <div class="flex justify-center">
+              <svg class="h-6 w-6 text-slate-500 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
             </div>
-          </div>
-
-          <!-- Mobile arrow -->
-          <div class="flex md:hidden justify-center">
-            <svg class="h-6 w-6 text-slate-500 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
-          </div>
-
-          <div class="rounded-2xl border border-[#6366F1]/30 bg-[#1E293B] p-8 text-center">
-            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#6366F1]/10">
-              <svg class="h-7 w-7 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
+            <div class="rounded-2xl border border-[#0D9488]/30 bg-[#1E293B] p-8 text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#0D9488]/10">
+                <svg class="h-7 w-7 text-[#0D9488]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-white">vinQuality</h3>
+              <p class="mt-1 text-sm font-medium text-[#5EEAD4]">Detect &amp; Resolve</p>
+              <p class="mt-3 text-sm text-slate-400">Capture non-conformances, manage CAPAs, and track corrective actions.</p>
             </div>
-            <h3 class="mt-4 text-lg font-bold text-white">vinReliability</h3>
-            <p class="mt-1 text-sm font-medium text-[#A5B4FC]">Analyze</p>
-            <p class="mt-3 text-sm text-slate-400">Statistically analyze reliability data to drive continuous improvement.</p>
+            <div class="flex justify-center">
+              <svg class="h-6 w-6 text-slate-500 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+            </div>
+            <div class="rounded-2xl border border-[#6366F1]/30 bg-[#1E293B] p-8 text-center">
+              <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#6366F1]/10">
+                <svg class="h-7 w-7 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 class="mt-4 text-lg font-bold text-white">vinReliability</h3>
+              <p class="mt-1 text-sm font-medium text-[#A5B4FC]">Analyze</p>
+              <p class="mt-3 text-sm text-slate-400">Statistically analyze reliability data to drive continuous improvement.</p>
+            </div>
           </div>
         </div>
 
