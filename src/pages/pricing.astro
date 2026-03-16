@@ -330,9 +330,9 @@ import Footer from '../components/Footer.astro';
                 Email support
               </li>
             </ul>
-            <a href="https://vinfmea.com/pricing" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
+            <button id="fmea-pro-checkout" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors cursor-pointer">
               Start Free Trial
-            </a>
+            </button>
           </div>
 
           <!-- Team (Highlighted) with interactive slider -->
@@ -423,9 +423,9 @@ import Footer from '../components/Footer.astro';
                 Priority email support
               </li>
             </ul>
-            <a href="https://vinfmea.com/pricing" class="mt-6 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors">
+            <button id="fmea-team-checkout" class="mt-6 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors cursor-pointer">
               Start Free Trial
-            </a>
+            </button>
           </div>
 
           <!-- Enterprise -->
@@ -697,6 +697,49 @@ import Footer from '../components/Footer.astro';
         plusBtn.addEventListener('click', function() { update(parseInt(slider.value) + 1); });
         presets.forEach(function(btn) {
           btn.addEventListener('click', function() { update(parseInt(this.dataset.seats)); });
+        });
+      })();
+    </script>
+
+    <!-- vinFMEA Stripe Checkout Script -->
+    <script>
+      (function() {
+        var FMEA_API = 'https://vinfmea-api-production.up.railway.app';
+        var proBtn = document.getElementById('fmea-pro-checkout');
+        var teamBtn = document.getElementById('fmea-team-checkout');
+        var slider = document.getElementById('fmea-seats');
+
+        async function checkout(plan, quantity) {
+          var btn = plan === 'team_annual' ? teamBtn : proBtn;
+          var origText = btn.textContent;
+          btn.textContent = 'Redirecting...';
+          btn.disabled = true;
+          try {
+            var res = await fetch(FMEA_API + '/api/stripe/create-checkout-session', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ plan: plan, quantity: quantity })
+            });
+            var data = await res.json();
+            if (data.checkout_url) {
+              window.location.href = data.checkout_url;
+            } else {
+              throw new Error('No checkout URL');
+            }
+          } catch (e) {
+            alert('Unable to start checkout. Please try again or contact support.');
+            btn.textContent = origText;
+            btn.disabled = false;
+          }
+        }
+
+        proBtn.addEventListener('click', function() {
+          checkout('professional_annual', 1);
+        });
+
+        teamBtn.addEventListener('click', function() {
+          var seats = parseInt(slider.value) || 5;
+          checkout('team_annual', seats);
         });
       })();
     </script>
