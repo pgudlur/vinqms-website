@@ -1,0 +1,503 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "vinFMEA — FMEA Software",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows",
+  "description": "AIAG-VDA compliant FMEA software for failure mode and effects analysis. Supports DFMEA, PFMEA, SFMEA with risk matrix visualization, Action Priority calculations, and Excel import.",
+  "url": "https://vinqms.com/fmea-software",
+  "publisher": {
+    "@type": "Organization",
+    "name": "vinReliability LLC"
+  }
+});
+
+const painPoints = [
+  {
+    title: "Excel Version Chaos",
+    description: "Multiple versions of the same FMEA floating around on shared drives. No one knows which is current. Changes get overwritten or lost entirely.",
+    icon: "files"
+  },
+  {
+    title: "No Risk Visualization",
+    description: "Staring at rows of numbers in a spreadsheet tells you nothing at a glance. High-risk failure modes hide in plain sight until they cause a field failure.",
+    icon: "eye"
+  },
+  {
+    title: "Manual AP Calculations",
+    description: "Hand-calculating Action Priority from severity, occurrence, and detection ratings across hundreds of rows is tedious and error-prone.",
+    icon: "calculator"
+  },
+  {
+    title: "Disconnected from Quality",
+    description: "When a predicted failure mode actually occurs in production, there is no link back to your FMEA. Lessons learned never close the loop.",
+    icon: "unlink"
+  }
+];
+
+const features = [
+  {
+    title: "Risk Matrix Visualization",
+    description: "Interactive heatmaps that instantly highlight your highest-risk failure modes. Filter by severity, occurrence, detection, or action priority.",
+    icon: "matrix"
+  },
+  {
+    title: "Action Priority Calculator",
+    description: "Automatic AP ratings based on the AIAG-VDA methodology. No more manual lookups or formula errors across hundreds of failure modes.",
+    icon: "calculator"
+  },
+  {
+    title: "DFMEA + PFMEA + SFMEA",
+    description: "Full support for Design, Process, and System FMEAs with traceability between levels. Changes cascade automatically where linked.",
+    icon: "layers"
+  },
+  {
+    title: "Revision History",
+    description: "Every change tracked with who, what, and when. Compare revisions side-by-side. Roll back to any previous version with one click.",
+    icon: "history"
+  },
+  {
+    title: "Team Collaboration",
+    description: "Multiple engineers working on the same FMEA simultaneously. No file locking, no merge conflicts, no emailing spreadsheets back and forth.",
+    icon: "users"
+  },
+  {
+    title: "Export & Reporting",
+    description: "Generate professional FMEA reports in PDF, Excel, and Word formats. Custom templates that match your customer and OEM requirements.",
+    icon: "export"
+  }
+];
+
+const comparisonRows = [
+  { category: "Real-Time Collaboration", vinfmea: "Multiple users simultaneously", excel: "One person at a time (file lock)" },
+  { category: "AIAG-VDA Compliance", vinfmea: "Built-in 7-step methodology", excel: "Manual template maintenance" },
+  { category: "Risk Visualization", vinfmea: "Interactive heatmaps and dashboards", excel: "Conditional formatting at best" },
+  { category: "Version Control", vinfmea: "Automatic with full revision history", excel: "Manual file naming and backups" },
+  { category: "AP Calculation", vinfmea: "Automatic per AIAG-VDA tables", excel: "Manual formulas prone to errors" },
+  { category: "Quality System Integration", vinfmea: "Links to NCMRs and CAPAs", excel: "Completely disconnected" }
+];
+
+const standards = [
+  { name: "AIAG-VDA", desc: "Harmonized FMEA handbook" },
+  { name: "SAE J1739", desc: "Surface vehicle FMEA standard" },
+  { name: "IEC 60812", desc: "Failure mode & effects analysis" },
+  { name: "MIL-STD-1629A", desc: "Military FMEA procedures" }
+];
+
+const faqs = [
+  {
+    question: "What is FMEA software?",
+    answer: "FMEA software is a specialized tool for conducting Failure Mode and Effects Analysis — a structured methodology for identifying potential failure modes in a product or process, assessing their risk, and prioritizing corrective actions. vinFMEA replaces Excel-based FMEAs with a purpose-built platform that automates AP calculations, provides risk visualization, and maintains full revision history."
+  },
+  {
+    question: "Does vinFMEA support the AIAG-VDA methodology?",
+    answer: "Yes. vinFMEA fully implements the AIAG-VDA harmonized FMEA handbook methodology, including the 7-step approach (Planning & Preparation, Structure Analysis, Function Analysis, Failure Analysis, Risk Analysis, Optimization, and Results Documentation), Action Priority ratings, and all required documentation fields for IATF 16949 audits."
+  },
+  {
+    question: "Can I import existing FMEAs from Excel?",
+    answer: "Yes. vinFMEA includes an Excel import wizard that lets you map your existing spreadsheet columns to vinFMEA fields. Import your entire FMEA library — failure modes, causes, effects, ratings, and recommended actions — in minutes. No manual re-entry required."
+  },
+  {
+    question: "Is there a free trial?",
+    answer: "Yes. vinFMEA offers a 14-day free trial with full access to all features, including DFMEA, PFMEA, SFMEA, risk matrix visualization, and team collaboration. No credit card required. Download and start analyzing failure modes today."
+  }
+];
+---
+
+<BaseLayout
+  title="FMEA Software — AIAG-VDA Compliant Failure Mode Analysis | vinFMEA"
+  description="AIAG-VDA compliant FMEA software that replaces Excel. Risk matrix visualization, automatic Action Priority calculations, DFMEA + PFMEA + SFMEA, and team collaboration. Free trial."
+  keywords="FMEA software, FMEA tool, failure mode effects analysis software, AIAG-VDA FMEA, DFMEA software, PFMEA software, FMEA Excel replacement, risk analysis software"
+  canonical="/fmea-software"
+  jsonLd={jsonLd}
+>
+  <Header />
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A]">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-1/3 w-96 h-96 bg-[#2563EB] rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-[#F97316] rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+        <div class="reveal mx-auto max-w-4xl text-center">
+          <span class="inline-flex items-center rounded-full border border-[#2563EB]/30 bg-[#2563EB]/10 px-4 py-1.5 text-sm font-medium text-[#93C5FD]">
+            AIAG-VDA &amp; SAE J1739 Compliant
+          </span>
+          <h1 class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            FMEA Software Built for<br />AIAG-VDA Compliance
+          </h1>
+          <p class="mt-6 text-lg text-slate-300 sm:text-xl max-w-2xl mx-auto leading-relaxed">
+            Stop wrestling with Excel FMEAs. vinFMEA gives your team interactive risk visualization, automatic Action Priority calculations, and real-time collaboration — all in one AIAG-VDA compliant platform.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://vinfmea.com/register"
+              class="inline-flex items-center justify-center rounded-lg bg-[#2563EB] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[#2563EB]/25 hover:bg-[#1D4ED8] transition-colors w-full sm:w-auto"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg border border-slate-500 px-6 py-3 text-base font-semibold text-slate-200 hover:bg-white/5 transition-colors w-full sm:w-auto"
+            >
+              Request a Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Screenshot Placeholder -->
+        <div class="reveal relative mt-16 mx-auto max-w-5xl">
+          <div class="rounded-xl border border-slate-700 bg-[#1E293B] shadow-2xl overflow-hidden">
+            <div class="flex items-center gap-2 px-4 py-3 bg-[#0F172A] border-b border-slate-700">
+              <div class="flex gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+              </div>
+              <div class="flex-1 mx-4">
+                <div class="mx-auto max-w-md rounded-md bg-slate-800 px-3 py-1 text-xs text-slate-400 text-center">vinfmea.com</div>
+              </div>
+            </div>
+            <!-- Placeholder UI representing FMEA risk matrix -->
+            <div class="p-6 space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="h-8 w-40 rounded bg-[#2563EB]/20 flex items-center justify-center text-xs text-[#93C5FD] font-medium">PFMEA — Brake Assembly</div>
+                  <div class="h-8 w-20 rounded bg-slate-700 flex items-center justify-center text-xs text-slate-400">Rev 4</div>
+                </div>
+                <div class="flex gap-2">
+                  <div class="h-8 w-24 rounded bg-slate-700 flex items-center justify-center text-xs text-slate-400">Export PDF</div>
+                  <div class="h-8 w-20 rounded bg-[#2563EB] flex items-center justify-center text-xs text-white font-medium">Save</div>
+                </div>
+              </div>
+              <!-- Risk Matrix Placeholder -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="rounded-lg border border-slate-700 p-4">
+                  <p class="text-[10px] text-slate-500 uppercase tracking-wider mb-3">Risk Matrix — Before Actions</p>
+                  <div class="grid grid-cols-5 gap-1">
+                    <div class="h-6 rounded bg-red-500/60"></div>
+                    <div class="h-6 rounded bg-red-500/40"></div>
+                    <div class="h-6 rounded bg-amber-500/40"></div>
+                    <div class="h-6 rounded bg-amber-500/30"></div>
+                    <div class="h-6 rounded bg-green-500/30"></div>
+                    <div class="h-6 rounded bg-red-500/40"></div>
+                    <div class="h-6 rounded bg-amber-500/50"></div>
+                    <div class="h-6 rounded bg-amber-500/30"></div>
+                    <div class="h-6 rounded bg-green-500/30"></div>
+                    <div class="h-6 rounded bg-green-500/20"></div>
+                    <div class="h-6 rounded bg-amber-500/40"></div>
+                    <div class="h-6 rounded bg-amber-500/30"></div>
+                    <div class="h-6 rounded bg-green-500/40"></div>
+                    <div class="h-6 rounded bg-green-500/30"></div>
+                    <div class="h-6 rounded bg-green-500/20"></div>
+                    <div class="h-6 rounded bg-amber-500/30"></div>
+                    <div class="h-6 rounded bg-green-500/40"></div>
+                    <div class="h-6 rounded bg-green-500/30"></div>
+                    <div class="h-6 rounded bg-green-500/20"></div>
+                    <div class="h-6 rounded bg-green-500/10"></div>
+                    <div class="h-6 rounded bg-green-500/30"></div>
+                    <div class="h-6 rounded bg-green-500/20"></div>
+                    <div class="h-6 rounded bg-green-500/20"></div>
+                    <div class="h-6 rounded bg-green-500/10"></div>
+                    <div class="h-6 rounded bg-green-500/10"></div>
+                  </div>
+                </div>
+                <div class="rounded-lg border border-slate-700 p-4">
+                  <p class="text-[10px] text-slate-500 uppercase tracking-wider mb-3">Action Priority Summary</p>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-slate-400">High (H)</span>
+                      <div class="flex items-center gap-2">
+                        <div class="w-24 h-3 rounded-full bg-slate-700 overflow-hidden"><div class="h-full w-1/4 rounded-full bg-red-500"></div></div>
+                        <span class="text-xs text-red-400 font-medium">3</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-slate-400">Medium (M)</span>
+                      <div class="flex items-center gap-2">
+                        <div class="w-24 h-3 rounded-full bg-slate-700 overflow-hidden"><div class="h-full w-2/4 rounded-full bg-amber-500"></div></div>
+                        <span class="text-xs text-amber-400 font-medium">8</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-slate-400">Low (L)</span>
+                      <div class="flex items-center gap-2">
+                        <div class="w-24 h-3 rounded-full bg-slate-700 overflow-hidden"><div class="h-full w-3/4 rounded-full bg-green-500"></div></div>
+                        <span class="text-xs text-green-400 font-medium">21</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAIN POINTS ============ -->
+    <section class="py-20 sm:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Excel FMEAs Are Holding You Back</h2>
+          <p class="mt-4 text-lg text-slate-600">These problems are universal across every team still using spreadsheets for failure mode analysis.</p>
+        </div>
+        <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {painPoints.map((point) => (
+            <div class="rounded-2xl border border-red-100 bg-red-50/50 p-6">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100">
+                {point.icon === "files" && (
+                  <svg class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                  </svg>
+                )}
+                {point.icon === "eye" && (
+                  <svg class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+                  </svg>
+                )}
+                {point.icon === "calculator" && (
+                  <svg class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                )}
+                {point.icon === "unlink" && (
+                  <svg class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                  </svg>
+                )}
+              </div>
+              <h3 class="mt-4 text-base font-bold text-slate-900">{point.title}</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">{point.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AIAG-VDA COMPLIANCE ============ -->
+    <section class="py-20 sm:py-28 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">The AIAG-VDA 7-Step Methodology, Built In</h2>
+          <p class="mt-4 text-lg text-slate-600">vinFMEA guides your team through every step of the harmonized FMEA process — no training manuals required.</p>
+        </div>
+        <div class="reveal mt-16">
+          <!-- Desktop Steps -->
+          <div class="hidden lg:grid grid-cols-7 gap-3">
+            {[
+              { step: "1", title: "Planning", desc: "Define scope, team, and timing" },
+              { step: "2", title: "Structure", desc: "System structure and boundaries" },
+              { step: "3", title: "Function", desc: "Function tree and requirements" },
+              { step: "4", title: "Failure", desc: "Failure modes, effects, causes" },
+              { step: "5", title: "Risk", desc: "S, O, D ratings and AP" },
+              { step: "6", title: "Optimization", desc: "Actions to reduce risk" },
+              { step: "7", title: "Documentation", desc: "Results and evidence" }
+            ].map((item) => (
+              <div class="rounded-xl border border-[#2563EB]/20 bg-white p-4 text-center">
+                <div class="mx-auto flex h-9 w-9 items-center justify-center rounded-full bg-[#2563EB]/10">
+                  <span class="text-sm font-extrabold text-[#2563EB]">{item.step}</span>
+                </div>
+                <h3 class="mt-2 text-xs font-bold text-slate-900">{item.title}</h3>
+                <p class="mt-1 text-[11px] text-slate-500 leading-snug">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+          <!-- Mobile Steps -->
+          <div class="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {[
+              { step: "1", title: "Planning", desc: "Define scope, team, and timing" },
+              { step: "2", title: "Structure", desc: "System structure and boundaries" },
+              { step: "3", title: "Function", desc: "Function tree and requirements" },
+              { step: "4", title: "Failure", desc: "Failure modes, effects, causes" },
+              { step: "5", title: "Risk", desc: "S, O, D ratings and AP" },
+              { step: "6", title: "Optimization", desc: "Actions to reduce risk" },
+              { step: "7", title: "Documentation", desc: "Results and evidence" }
+            ].map((item) => (
+              <div class="rounded-xl border border-[#2563EB]/20 bg-white p-4 text-center">
+                <div class="mx-auto flex h-9 w-9 items-center justify-center rounded-full bg-[#2563EB]/10">
+                  <span class="text-sm font-extrabold text-[#2563EB]">{item.step}</span>
+                </div>
+                <h3 class="mt-2 text-xs font-bold text-slate-900">{item.title}</h3>
+                <p class="mt-1 text-[11px] text-slate-500 leading-snug">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURE HIGHLIGHTS ============ -->
+    <section class="py-20 sm:py-28 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Everything You Need for Professional FMEA</h2>
+          <p class="mt-4 text-lg text-slate-600">Purpose-built tools that make failure mode analysis faster, more accurate, and audit-ready.</p>
+        </div>
+        <div class="reveal mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 card-hover">
+              <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#2563EB]/10">
+                {feature.icon === "matrix" && (
+                  <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  </svg>
+                )}
+                {feature.icon === "calculator" && (
+                  <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                )}
+                {feature.icon === "layers" && (
+                  <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                )}
+                {feature.icon === "history" && (
+                  <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+                {feature.icon === "users" && (
+                  <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                )}
+                {feature.icon === "export" && (
+                  <svg class="h-5 w-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                )}
+              </div>
+              <h3 class="mt-4 text-base font-bold text-slate-900">{feature.title}</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMPARISON TABLE ============ -->
+    <section class="py-20 sm:py-28 bg-slate-50">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">vinFMEA vs. Excel</h2>
+          <p class="mt-4 text-lg text-slate-600">See why FMEA teams switch from spreadsheets to purpose-built software.</p>
+        </div>
+        <div class="reveal mt-12 rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-sm">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200">
+                  <th class="text-left px-6 py-4 font-semibold text-slate-900"></th>
+                  <th class="text-left px-6 py-4 font-semibold text-[#2563EB]">
+                    <div class="flex items-center gap-2">
+                      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      vinFMEA
+                    </div>
+                  </th>
+                  <th class="text-left px-6 py-4 font-semibold text-slate-500">
+                    <div class="flex items-center gap-2">
+                      <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                      Excel
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row, i) => (
+                  <tr class={i % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}>
+                    <td class="px-6 py-4 font-medium text-slate-900">{row.category}</td>
+                    <td class="px-6 py-4 text-slate-700">{row.vinfmea}</td>
+                    <td class="px-6 py-4 text-slate-500">{row.excel}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STANDARDS SUPPORTED ============ -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">Standards Supported</h2>
+          <p class="mt-3 text-base text-slate-600">vinFMEA is built to meet the standards your industry and customers require.</p>
+        </div>
+        <div class="reveal mt-12 flex flex-wrap items-center justify-center gap-4">
+          {standards.map((std) => (
+            <div class="inline-flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-6 py-4 hover:shadow-md transition-shadow">
+              <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-[#2563EB]/10">
+                <svg class="h-4 w-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm font-bold text-slate-900">{std.name}</p>
+                <p class="text-xs text-slate-500">{std.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="py-20 sm:py-28 bg-slate-50">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center">
+          <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Frequently Asked Questions</h2>
+          <p class="mt-4 text-lg text-slate-600">Common questions about FMEA software.</p>
+        </div>
+        <div class="mt-12 space-y-4">
+          {faqs.map((faq, i) => (
+            <div class={`reveal reveal-d${i + 1} rounded-xl border border-slate-200 bg-white`}>
+              <button class="faq-toggle w-full flex items-center justify-between p-5 text-left">
+                <span class="faq-question text-sm font-semibold text-slate-900">{faq.question}</span>
+                <svg class="faq-chevron h-5 w-5 text-slate-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+              </button>
+              <div class="faq-answer px-5 pb-5">
+                <p class="text-sm text-slate-600">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="py-20 sm:py-28 bg-gradient-to-br from-[#2563EB] via-[#1D4ED8] to-[#1E3A8A] gradient-animate">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-3xl text-center">
+          <h2 class="text-3xl font-bold text-white sm:text-4xl">Stop Wrestling with Excel FMEAs</h2>
+          <p class="mt-4 text-lg text-white/80">Start your 14-day free trial today. No credit card required. Import your existing FMEAs in minutes.</p>
+          <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="https://vinfmea.com/register"
+              class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-[#2563EB] shadow-lg hover:bg-slate-50 transition-colors w-full sm:w-auto"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center rounded-lg border border-white/30 px-6 py-3 text-base font-semibold text-white hover:bg-white/10 transition-colors w-full sm:w-auto"
+            >
+              Request a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
