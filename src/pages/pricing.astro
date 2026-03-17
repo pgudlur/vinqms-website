@@ -102,9 +102,12 @@ import Footer from '../components/Footer.astro';
                 Root cause documentation
               </li>
             </ul>
-            <a href="https://frontend-production-bec1.up.railway.app/register" class="mt-8 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors">
+            <a href="https://frontend-production-bec1.up.railway.app/register" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
               Start Free Trial
             </a>
+            <button data-vq-module="ncmr" class="vq-checkout mt-2 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors cursor-pointer">
+              Purchase
+            </button>
           </div>
 
           <!-- Deviations -->
@@ -137,6 +140,9 @@ import Footer from '../components/Footer.astro';
             <a href="https://frontend-production-bec1.up.railway.app/register" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
               Start Free Trial
             </a>
+            <button data-vq-module="deviations" class="vq-checkout mt-2 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors cursor-pointer">
+              Purchase
+            </button>
           </div>
 
           <!-- CAPA -->
@@ -169,6 +175,9 @@ import Footer from '../components/Footer.astro';
             <a href="https://frontend-production-bec1.up.railway.app/register" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
               Start Free Trial
             </a>
+            <button data-vq-module="capa" class="vq-checkout mt-2 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors cursor-pointer">
+              Purchase
+            </button>
           </div>
 
           <!-- SCAR -->
@@ -201,6 +210,9 @@ import Footer from '../components/Footer.astro';
             <a href="https://frontend-production-bec1.up.railway.app/register" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
               Start Free Trial
             </a>
+            <button data-vq-module="scar" class="vq-checkout mt-2 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors cursor-pointer">
+              Purchase
+            </button>
           </div>
 
           <!-- Analytics -->
@@ -233,6 +245,9 @@ import Footer from '../components/Footer.astro';
             <a href="https://frontend-production-bec1.up.railway.app/register" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
               Start Free Trial
             </a>
+            <button data-vq-module="analytics" class="vq-checkout mt-2 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors cursor-pointer">
+              Purchase
+            </button>
           </div>
 
           <!-- Calibration -->
@@ -265,6 +280,9 @@ import Footer from '../components/Footer.astro';
             <a href="https://frontend-production-bec1.up.railway.app/register" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
               Start Free Trial
             </a>
+            <button data-vq-module="calibration" class="vq-checkout mt-2 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors cursor-pointer">
+              Purchase
+            </button>
           </div>
         </div>
 
@@ -862,6 +880,57 @@ import Footer from '../components/Footer.astro';
           individualBtn.disabled = false;
           teamBtn.textContent = 'Purchase';
           teamBtn.disabled = false;
+        });
+      })();
+    </script>
+
+    <!-- vinQuality Module Checkout Script -->
+    <script>
+      (function() {
+        // TODO: Update this to the vinQuality backend production URL
+        var VQ_API = 'https://backend-production-bec1.up.railway.app';
+        var buttons = document.querySelectorAll('.vq-checkout');
+
+        async function vqCheckout(moduleName, btn) {
+          var origText = btn.textContent;
+          btn.textContent = 'Redirecting...';
+          btn.disabled = true;
+          try {
+            var res = await fetch(VQ_API + '/api/billing/public-checkout', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                modules: [moduleName],
+                seats: 1,
+                billing_interval: 'month'
+              })
+            });
+            var data = await res.json();
+            if (data.checkout_url) {
+              window.location.href = data.checkout_url;
+            } else {
+              throw new Error(data.detail || 'No checkout URL');
+            }
+          } catch (e) {
+            alert('Unable to start checkout. Please try again or contact support.');
+            btn.textContent = origText;
+            btn.disabled = false;
+          }
+        }
+
+        buttons.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var moduleName = this.getAttribute('data-vq-module');
+            vqCheckout(moduleName, this);
+          });
+        });
+
+        // Reset button state when navigating back from Stripe checkout
+        window.addEventListener('pageshow', function() {
+          buttons.forEach(function(btn) {
+            btn.textContent = 'Purchase';
+            btn.disabled = false;
+          });
         });
       })();
     </script>
