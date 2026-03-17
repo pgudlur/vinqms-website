@@ -516,9 +516,12 @@ import Footer from '../components/Footer.astro';
                 Email support
               </li>
             </ul>
-            <a href="https://app.vinreliability.net/login" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
-              Get Started
+            <a href="https://app.vinreliability.net/register" class="mt-8 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
+              Start Free Trial
             </a>
+            <button id="vr-individual-checkout" class="mt-2 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors cursor-pointer">
+              Purchase
+            </button>
           </div>
 
           <!-- Team (Highlighted) with interactive slider -->
@@ -602,9 +605,12 @@ import Footer from '../components/Footer.astro';
                 Priority email support
               </li>
             </ul>
-            <a href="https://app.vinreliability.net/login" class="mt-6 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors">
+            <a href="https://app.vinreliability.net/register" class="mt-6 block w-full rounded-lg border border-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-[#0D9488] hover:bg-[#0D9488] hover:text-white transition-colors">
               Start Free Trial
             </a>
+            <button id="vr-team-checkout" class="mt-2 block w-full rounded-lg bg-[#0D9488] px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#0F766E] transition-colors cursor-pointer">
+              Purchase
+            </button>
           </div>
 
           <!-- Enterprise -->
@@ -659,10 +665,7 @@ import Footer from '../components/Footer.astro';
         var BASE = 1799;
 
         function getPerSeat(seats) {
-          if (seats <= 4) return 1799;
-          if (seats <= 9) return 1599;
-          if (seats <= 24) return 1399;
-          return 1199;
+          return 1799;
         }
 
         function fmt(n) {
@@ -747,6 +750,14 @@ import Footer from '../components/Footer.astro';
           var seats = parseInt(slider.value) || 5;
           checkout('team_annual', seats);
         });
+
+        // Reset button state when navigating back from Stripe checkout
+        window.addEventListener('pageshow', function() {
+          proBtn.textContent = 'Purchase';
+          proBtn.disabled = false;
+          teamBtn.textContent = 'Purchase';
+          teamBtn.disabled = false;
+        });
       })();
     </script>
 
@@ -801,6 +812,56 @@ import Footer from '../components/Footer.astro';
         plusBtn.addEventListener('click', function() { update(parseInt(slider.value) + 1); });
         presets.forEach(function(btn) {
           btn.addEventListener('click', function() { update(parseInt(this.dataset.seats)); });
+        });
+      })();
+    </script>
+
+    <!-- vinReliability Stripe Checkout Script -->
+    <script>
+      (function() {
+        var VR_API = 'https://api.vinreliability.net';
+        var individualBtn = document.getElementById('vr-individual-checkout');
+        var teamBtn = document.getElementById('vr-team-checkout');
+        var slider = document.getElementById('vr-seats');
+
+        async function vrCheckout(endpoint, body, btn) {
+          var origText = btn.textContent;
+          btn.textContent = 'Redirecting...';
+          btn.disabled = true;
+          try {
+            var res = await fetch(VR_API + endpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(body)
+            });
+            var data = await res.json();
+            if (data.checkout_url) {
+              window.location.href = data.checkout_url;
+            } else {
+              throw new Error('No checkout URL');
+            }
+          } catch (e) {
+            alert('Unable to start checkout. Please try again or contact support.');
+            btn.textContent = origText;
+            btn.disabled = false;
+          }
+        }
+
+        individualBtn.addEventListener('click', function() {
+          vrCheckout('/api/checkout/create-session', { plan_type: 'annual' }, individualBtn);
+        });
+
+        teamBtn.addEventListener('click', function() {
+          var seats = parseInt(slider.value) || 5;
+          vrCheckout('/api/checkout/create-team-session', { seats: seats }, teamBtn);
+        });
+
+        // Reset button state when navigating back from Stripe checkout
+        window.addEventListener('pageshow', function() {
+          individualBtn.textContent = 'Purchase';
+          individualBtn.disabled = false;
+          teamBtn.textContent = 'Purchase';
+          teamBtn.disabled = false;
         });
       })();
     </script>
